@@ -781,7 +781,7 @@ const S1RainbowMaker: React.FC = () => {
               <MythBuster
                 myth="Rainbows come from paint in the clouds."
                 truth="Rainbows form when sunlight bends and splits as it passes through raindrops."
-                videos={[{ url: 'https://www.youtube.com/embed/nFAHAjiU5Hs', title: 'What Is a Rainbow?' }]}
+                videos={[{ url: 'https://www.youtube.com/embed/GqbgJ3c3yhc', title: 'What Is a Rainbow?' }]}
               />
             </SectionWrapper>
           )}
