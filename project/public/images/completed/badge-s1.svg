@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Badge Background -->
+  <circle cx="100" cy="100" r="90" fill="#5F47FF" />
+  <circle cx="100" cy="100" r="80" fill="#4938DB" />
+  
+  <!-- Rainbow Arc -->
+  <path d="M100,40 A60,60 0 0,1 160,100" stroke="#FF5252" stroke-width="8" fill="none" />
+  <path d="M100,50 A50,50 0 0,1 150,100" stroke="#FFEB3B" stroke-width="8" fill="none" />
+  <path d="M100,60 A40,40 0 0,1 140,100" stroke="#4CAF50" stroke-width="8" fill="none" />
+  <path d="M100,70 A30,30 0 0,1 130,100" stroke="#2196F3" stroke-width="8" fill="none" />
+  <path d="M100,80 A20,20 0 0,1 120,100" stroke="#9C27B0" stroke-width="8" fill="none" />
+  
+  <!-- Droplet Icon -->
+  <path d="M100,140 C100,160 120,160 120,140 C120,120 100,100 100,120 C100,100 80,120 80,140 C80,160 100,160 100,140" fill="#FFFFFF" />
+  
+  <!-- Badge Text -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">RAINBOW MAKER</text>
+</svg> 
