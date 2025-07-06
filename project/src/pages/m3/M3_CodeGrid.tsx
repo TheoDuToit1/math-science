@@ -59,6 +59,72 @@ const warmupQuestions = [
     correct: 2,
     image: null,
   },
+  {
+    question: 'Which direction is this arrow 🡺 pointing?',
+    options: [
+      { text: 'Right', explanation: 'Correct! This arrow points to the right.' },
+      { text: 'Left', explanation: 'Left is the opposite direction.' },
+      { text: 'Up', explanation: 'Up is a different direction.' },
+      { text: 'Down', explanation: 'Down is a different direction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is an algorithm?',
+    options: [
+      { text: 'A set of steps to solve a problem', explanation: 'Correct! An algorithm is a step-by-step solution.' },
+      { text: 'A random guess', explanation: 'Algorithms are not random.' },
+      { text: 'A magic trick', explanation: 'Algorithms are logical, not magic.' },
+      { text: 'A type of food', explanation: 'Algorithm is not a food.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What comes after a left turn if you are facing north?',
+    options: [
+      { text: 'West', explanation: 'Correct! A left turn from north faces west.' },
+      { text: 'East', explanation: 'East is a right turn from north.' },
+      { text: 'South', explanation: 'South is a U-turn from north.' },
+      { text: 'North', explanation: 'You started facing north.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which of these is a pattern?',
+    options: [
+      { text: 'Red, blue, red, blue', explanation: 'Correct! This is a repeating pattern.' },
+      { text: 'Red, red, red, red', explanation: 'This is not a pattern, just repetition.' },
+      { text: 'Blue, green, yellow', explanation: 'This is a sequence, not a repeating pattern.' },
+      { text: 'Green, green, green', explanation: 'This is not a pattern.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What do you call a mistake in code?',
+    options: [
+      { text: 'A bug', explanation: 'Correct! A bug is a mistake in code.' },
+      { text: 'A frog', explanation: 'A frog is not a coding term.' },
+      { text: 'A code', explanation: 'Code is the instructions, not the mistake.' },
+      { text: 'A jump', explanation: 'Jump is not a coding mistake.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which command moves you forward?',
+    options: [
+      { text: 'Go', explanation: 'Correct! "Go" or "Move forward" are commands to move ahead.' },
+      { text: 'Stop', explanation: 'Stop means to halt.' },
+      { text: 'Turn left', explanation: 'Turn left changes direction.' },
+      { text: 'Turn right', explanation: 'Turn right changes direction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section

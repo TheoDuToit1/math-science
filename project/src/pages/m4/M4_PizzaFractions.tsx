@@ -59,6 +59,72 @@ const warmupQuestions = [
     correct: 1,
     image: '/images/math/m4_pizza_fractions/unequal_parts.png',
   },
+  {
+    question: 'What is 1/4 of a pizza?',
+    options: [
+      { text: '1 out of 4 equal parts', explanation: 'Correct! 1/4 means one out of four equal parts.' },
+      { text: '1 out of 2', explanation: '1/2 is half.' },
+      { text: '1 out of 3', explanation: '1/3 is one out of three equal parts.' },
+      { text: '4 out of 4', explanation: '4/4 is the whole pizza.' },
+    ],
+    correct: 0,
+    image: '/images/math/m4_pizza_fractions/quarter_pizza.png',
+  },
+  {
+    question: 'If you eat 2 out of 8 slices, what fraction did you eat?',
+    options: [
+      { text: '2/8', explanation: 'Correct! 2 out of 8 is 2/8.' },
+      { text: '1/2', explanation: '1/2 would be 4 out of 8.' },
+      { text: '1/4', explanation: '1/4 would be 2 out of 8 only if the pizza had 8 slices.' },
+      { text: '8/8', explanation: '8/8 is the whole pizza.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which is bigger: 1/2 or 1/3?',
+    options: [
+      { text: '1/2', explanation: 'Correct! 1/2 is bigger than 1/3.' },
+      { text: '1/3', explanation: '1/3 is smaller than 1/2.' },
+      { text: 'They are equal', explanation: 'They are not equal.' },
+      { text: '1/4', explanation: '1/4 is smaller than both.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What do you call the top number in a fraction?',
+    options: [
+      { text: 'Numerator', explanation: 'Correct! The top number is the numerator.' },
+      { text: 'Denominator', explanation: 'The denominator is the bottom number.' },
+      { text: 'Fractionator', explanation: 'Fractionator is not a math term.' },
+      { text: 'Divider', explanation: 'Divider is not the correct term.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 3/4 of a pizza, how many parts are missing?',
+    options: [
+      { text: '1', explanation: 'Correct! 4 - 3 = 1 part missing.' },
+      { text: '2', explanation: '2 would be missing if you had 2/4.' },
+      { text: '3', explanation: '3 would be missing if you had 1/4.' },
+      { text: '4', explanation: '4 would be missing if you had no pizza.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the bottom number in a fraction called?',
+    options: [
+      { text: 'Denominator', explanation: 'Correct! The bottom number is the denominator.' },
+      { text: 'Numerator', explanation: 'Numerator is the top number.' },
+      { text: 'Divider', explanation: 'Divider is not the correct term.' },
+      { text: 'Pizza', explanation: 'Pizza is not a math term.' },
+    ],
+    correct: 0,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section

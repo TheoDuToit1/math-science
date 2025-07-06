@@ -57,6 +57,72 @@ const warmupQuestions = [
     correct: 1,
     image: null,
   },
+  {
+    question: 'What is the smallest 3-digit number?',
+    options: [
+      { text: '100', explanation: 'Correct! 100 is the smallest 3-digit number.' },
+      { text: '101', explanation: '101 is a 3-digit number, but not the smallest.' },
+      { text: '99', explanation: '99 is a 2-digit number.' },
+      { text: '111', explanation: '111 is a 3-digit number, but not the smallest.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which number is even?',
+    options: [
+      { text: '37', explanation: '37 is odd.' },
+      { text: '42', explanation: 'Correct! 42 is even.' },
+      { text: '55', explanation: '55 is odd.' },
+      { text: '73', explanation: '73 is odd.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is 10 more than 68?',
+    options: [
+      { text: '78', explanation: 'Correct! 68 + 10 = 78.' },
+      { text: '58', explanation: '58 is 10 less than 68.' },
+      { text: '80', explanation: '80 is 12 more than 68.' },
+      { text: '70', explanation: '70 is 2 more than 68.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which number is missing: 45, 46, __, 48?',
+    options: [
+      { text: '47', explanation: 'Correct! 45, 46, 47, 48.' },
+      { text: '49', explanation: '49 comes after 48.' },
+      { text: '44', explanation: '44 comes before 45.' },
+      { text: '50', explanation: '50 comes after 49.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the value of the 2 in 245?',
+    options: [
+      { text: '2 ones', explanation: 'The 2 is in the hundreds place.' },
+      { text: '2 tens', explanation: 'The 2 is in the hundreds place.' },
+      { text: '2 hundreds', explanation: 'Correct! 2 hundreds = 200.' },
+      { text: '20', explanation: '20 is two tens.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'Which number is odd?',
+    options: [
+      { text: '24', explanation: '24 is even.' },
+      { text: '36', explanation: '36 is even.' },
+      { text: '51', explanation: 'Correct! 51 is odd.' },
+      { text: '60', explanation: '60 is even.' },
+    ],
+    correct: 2,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section

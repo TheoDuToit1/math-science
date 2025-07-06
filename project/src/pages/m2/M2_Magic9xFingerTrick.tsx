@@ -59,6 +59,72 @@ const warmupQuestions = [
     correct: 3,
     image: null,
   },
+  {
+    question: 'What is 9 × 3?',
+    options: [
+      { text: '27', explanation: 'Correct! 9 × 3 = 27.' },
+      { text: '18', explanation: '18 is 9 × 2.' },
+      { text: '36', explanation: '36 is 9 × 4.' },
+      { text: '21', explanation: '21 is 7 × 3.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 9 × 7?',
+    options: [
+      { text: '63', explanation: 'Correct! 9 × 7 = 63.' },
+      { text: '56', explanation: '56 is 8 × 7.' },
+      { text: '72', explanation: '72 is 9 × 8.' },
+      { text: '49', explanation: '49 is 7 × 7.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the sum of the digits in 54?',
+    options: [
+      { text: '9', explanation: 'Correct! 5 + 4 = 9.' },
+      { text: '7', explanation: '7 is 5 + 2.' },
+      { text: '6', explanation: '6 is 3 + 3.' },
+      { text: '8', explanation: '8 is 4 + 4.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which of these is a multiple of 9?',
+    options: [
+      { text: '27', explanation: 'Correct! 27 is 9 × 3.' },
+      { text: '25', explanation: '25 is not a multiple of 9.' },
+      { text: '32', explanation: '32 is not a multiple of 9.' },
+      { text: '40', explanation: '40 is not a multiple of 9.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 9 × 6?',
+    options: [
+      { text: '54', explanation: 'Correct! 9 × 6 = 54.' },
+      { text: '45', explanation: '45 is 9 × 5.' },
+      { text: '63', explanation: '63 is 9 × 7.' },
+      { text: '36', explanation: '36 is 9 × 4.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 9 × 10?',
+    options: [
+      { text: '90', explanation: 'Correct! 9 × 10 = 90.' },
+      { text: '99', explanation: '99 is 9 × 11.' },
+      { text: '81', explanation: '81 is 9 × 9.' },
+      { text: '100', explanation: '100 is not a multiple of 9.' },
+    ],
+    correct: 0,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section
@@ -163,7 +229,7 @@ const M2_Magic9xFingerTrick: React.FC = () => {
     {
       label: 'Magic Finger Trick Tutorial',
       content: (
-        <SectionWrapper key="magictrick" label="Magic Finger Trick Tutorial" icon="🧩">
+        <SectionWrapper key="magictrick" label="Magic Finger Trick Tutorial" icon="��">
           <MagicFingerTrickTutorial />
         </SectionWrapper>
       )

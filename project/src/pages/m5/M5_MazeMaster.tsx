@@ -59,6 +59,72 @@ const warmupQuestions = [
     correct: 2,
     image: null,
   },
+  {
+    question: 'What is a sequence?',
+    options: [
+      { text: 'A list of steps in order', explanation: 'Correct! A sequence is an ordered list of steps.' },
+      { text: 'A random guess', explanation: 'A sequence is not random.' },
+      { text: 'A mistake', explanation: 'A mistake is not a sequence.' },
+      { text: 'A puzzle', explanation: 'A puzzle can have a sequence, but is not itself a sequence.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which direction is opposite of left?',
+    options: [
+      { text: 'Right', explanation: 'Correct! Right is the opposite of left.' },
+      { text: 'Up', explanation: 'Up is not the opposite of left.' },
+      { text: 'Down', explanation: 'Down is not the opposite of left.' },
+      { text: 'Forward', explanation: 'Forward is not the opposite of left.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What do you call a repeated set of steps?',
+    options: [
+      { text: 'A loop', explanation: 'Correct! A loop repeats steps.' },
+      { text: 'A jump', explanation: 'A jump is not a repeated set of steps.' },
+      { text: 'A stop', explanation: 'A stop means to halt.' },
+      { text: 'A bug', explanation: 'A bug is a mistake in code.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which of these is a turn?',
+    options: [
+      { text: 'Left', explanation: 'Correct! Left is a turn.' },
+      { text: 'Forward', explanation: 'Forward is not a turn.' },
+      { text: 'Stop', explanation: 'Stop is not a turn.' },
+      { text: 'Go', explanation: 'Go is not a turn.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the goal in a maze?',
+    options: [
+      { text: 'To reach the end', explanation: 'Correct! The goal is to reach the end.' },
+      { text: 'To get lost', explanation: 'Getting lost is not the goal.' },
+      { text: 'To go in circles', explanation: 'Going in circles is not the goal.' },
+      { text: 'To stop', explanation: 'Stopping is not the goal.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What do you call a mistake in an algorithm?',
+    options: [
+      { text: 'A bug', explanation: 'Correct! A bug is a mistake in an algorithm or code.' },
+      { text: 'A loop', explanation: 'A loop is a repeated set of steps.' },
+      { text: 'A jump', explanation: 'A jump is not a mistake.' },
+      { text: 'A puzzle', explanation: 'A puzzle is not a mistake.' },
+    ],
+    correct: 0,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section
