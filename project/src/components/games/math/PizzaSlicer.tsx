@@ -33,6 +33,34 @@ const PizzaSlicer: React.FC<PizzaSlicerProps> = ({ onComplete }) => {
   const [showHint, setShowHint] = useState(false);
   const [completedLevels, setCompletedLevels] = useState<number[]>([]);
 
+  // Replace level/friendCount logic with a levels array of 24 varied levels
+  const levels = [
+    { friendCount: 2, options: [2, 4, 8] },
+    { friendCount: 3, options: [3, 6, 9] },
+    { friendCount: 4, options: [4, 8, 12] },
+    { friendCount: 5, options: [5, 10, 15] },
+    { friendCount: 6, options: [6, 12, 3] },
+    { friendCount: 7, options: [7, 14, 2] },
+    { friendCount: 8, options: [8, 4, 16] },
+    { friendCount: 9, options: [9, 3, 18] },
+    { friendCount: 10, options: [10, 5, 20] },
+    { friendCount: 11, options: [11, 22, 2] },
+    { friendCount: 12, options: [12, 6, 24] },
+    { friendCount: 5, options: [5, 4, 8] }, // challenge: not all options are multiples
+    { friendCount: 7, options: [7, 8, 14] },
+    { friendCount: 3, options: [3, 5, 6] },
+    { friendCount: 4, options: [4, 5, 10] },
+    { friendCount: 6, options: [6, 8, 12] },
+    { friendCount: 8, options: [8, 7, 16] },
+    { friendCount: 9, options: [9, 12, 18] },
+    { friendCount: 10, options: [10, 8, 20] },
+    { friendCount: 11, options: [11, 10, 22] },
+    { friendCount: 12, options: [12, 9, 24] },
+    { friendCount: 2, options: [2, 3, 4] },
+    { friendCount: 3, options: [3, 4, 6] },
+    { friendCount: 4, options: [4, 6, 8] },
+  ];
+
   // Reset game state for a new level
   const resetLevel = () => {
     setSelectedSlicer(null);

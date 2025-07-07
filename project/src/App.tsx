@@ -25,7 +25,6 @@ import M2_Magic9xFingerTrick from './pages/m2/M2_Magic9xFingerTrick';
 import M3_CodeGrid from './pages/m3/M3_CodeGrid';
 import M4_PizzaFractions from './pages/m4/M4_PizzaFractions';
 import M5_MazeMaster from './pages/m5/M5_MazeMaster';
-import FullscreenManager from './components/common/FullscreenManager';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -376,300 +375,285 @@ function App() {
   );
   };
 
-  // Main app content
   if (isLoggedIn) {
-    const redirectPath = formData.subject === 'Science' ? '/science' : '/math';
-    const games = formData.subject === 'Science' ? scienceGames : mathGames;
-    const filteredGames = filterAndSortGames(games);
+    // Redirect to the appropriate hub based on subject selection
+    const redirectPath = formData.subject === 'Math' ? '/math' : '/science';
     
+    const games = formData.subject === 'Math' ? mathGames : scienceGames;
+    const filteredGames = filterAndSortGames(games);
+    const subjectColor = formData.subject === 'Math' ? 'blue' : 'purple';
+    const SubjectIcon = formData.subject === 'Math' ? Calculator : Atom;
+
     return (
       <AnimationProvider>
-        <FullscreenManager>
-          <div className="min-h-screen bg-gray-50">
-            {/* Header */}
-            <header className="bg-white shadow">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
-                  <div className="flex">
-                    <div className="flex-shrink-0 flex items-center">
-                      {formData.subject === 'Science' ? (
-                        <Atom className="h-8 w-8 text-purple-600" />
-                      ) : (
-                        <Calculator className="h-8 w-8 text-blue-600" />
-                      )}
-                      <span className="ml-2 text-xl font-bold">
-                        {formData.subject} Games
-                      </span>
-                    </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        {/* Enhanced Header */}
+        <div className={`bg-gradient-to-r ${formData.subject === 'Math' ? 'from-blue-600 via-indigo-600 to-purple-600' : 'from-purple-600 via-indigo-600 to-blue-600'} shadow-xl`}>
+            <header className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center">
+                {/* Logo and Title */}
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 bg-white bg-opacity-20 p-2 rounded-xl">
+                    <SubjectIcon className="h-8 w-8 text-white" />
                   </div>
-                  <div className="flex items-center">
-                    <button
-                      onClick={handleSignOut}
-                      className="ml-3 inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200"
-                    >
-                      Sign Out
-                    </button>
+                  <div className="ml-4">
+                    <h1 className="text-2xl font-bold text-white">{formData.subject} Learning Hub</h1>
+                    <p className="text-blue-100 text-sm">Explore interactive games and activities</p>
                   </div>
+                </div>
+                
+                {/* Right Side: User Actions */}
+                <div className="flex items-center space-x-4">
+                  <button 
+                    onClick={handleSignOut}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Sign Out
+                  </button>
                 </div>
               </div>
             </header>
-
-            {/* Main content */}
-            <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-              {/* Subject hub pages */}
-              {formData.subject === 'Science' && window.location.pathname === '/science' && <ScienceHub />}
-              {formData.subject === 'Math' && window.location.pathname === '/math' && <MathHub />}
-
-              {/* Game list header */}
-              <div className="px-4 sm:px-0 mb-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4 md:mb-0">
-                    {formData.subject} Learning Games
-                  </h2>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    {/* View toggle */}
-                    <div className="flex items-center space-x-2">
-                      <button
-                        onClick={() => setViewMode('grid')}
-                        className={`p-2 rounded ${viewMode === 'grid' ? 'bg-indigo-100 text-indigo-600' : 'text-gray-400 hover:text-gray-500'}`}
-                      >
-                        <Grid3X3 className="h-5 w-5" />
-                      </button>
-                      <button
-                        onClick={() => setViewMode('list')}
-                        className={`p-2 rounded ${viewMode === 'list' ? 'bg-indigo-100 text-indigo-600' : 'text-gray-400 hover:text-gray-500'}`}
-                      >
-                        <List className="h-5 w-5" />
-                      </button>
-                    </div>
-                    
-                    {/* Difficulty filter */}
-                    <div className="relative inline-block text-left">
-                      <select
-                        value={filterDifficulty}
-                        onChange={(e) => setFilterDifficulty(e.target.value)}
-                        className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                      >
-                        <option value="all">All Difficulties</option>
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard">Hard</option>
-                      </select>
-                    </div>
-                    
-                    {/* Sort by */}
-                    <div className="relative inline-block text-left">
-                      <select
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value as any)}
-                        className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                      >
-                        <option value="popularity">Most Popular</option>
-                        <option value="name">Name (A-Z)</option>
-                        <option value="difficulty">Difficulty</option>
-                        <option value="time">Time (Shortest)</option>
-                      </select>
-                    </div>
-
-                    {/* Search */}
-                    <div className="relative flex-grow maxw-xs">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Search className="h-4 w-4 text-gray-400" />
-                      </div>
-                      <input
-                        type="text"
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                        placeholder="Search games..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Games Grid/List View */}
-              {filteredGames.length > 0 ? (
-                <div className={`${viewMode === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'space-y-4'}`}>
-                  {filteredGames.map((game, index) => (
-                    viewMode === 'grid' ? 
-                      <GameCard key={game.id} game={game} index={index} /> : 
-                      <GameListItem key={game.id} game={game} index={index} />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-16">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
-                    <Search className="h-8 w-8 text-gray-400" />
-                  </div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-1">No games found</h3>
-                  <p className="text-gray-500">Try adjusting your search or filter criteria</p>
-                </div>
-              )}
-            </main>
-            
-            {/* Routes for our application */}
-            <Routes>
-              <Route path="/" element={<Navigate to={redirectPath} />} />
-              <Route path="/science" element={null} />
-              <Route path="/math" element={null} />
-              <Route path="/s1" element={<S1RainbowMaker />} />
-              <Route path="/s2" element={<S2_MoonMagicExplorer />} />
-              <Route path="/s3" element={<S3_LightningPower />} />
-              <Route path="/s4" element={<S4_SecretSoundJourney />} />
-              <Route path="/s5" element={<S5_WaterCycleAdventure />} />
-              <Route path="/m1" element={<M1_NumberMysteries />} />
-              <Route path="/m2" element={<M2_Magic9xFingerTrick />} />
-              <Route path="/m3" element={<M3_CodeGrid />} />
-              <Route path="/m4" element={<M4_PizzaFractions />} />
-              <Route path="/m5" element={<M5_MazeMaster />} />
-            </Routes>
           </div>
-        </FullscreenManager>
+
+          {/* Main Content */}
+          <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-1">Interactive {formData.subject} Games</h2>
+                <p className="text-gray-600">Select a game to start your learning adventure</p>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+                {/* Sort & Filter Controls */}
+                <div className="relative">
+                  <button 
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 bg-white rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    <SortAsc className="h-4 w-4 mr-2" />
+                    Sort by
+                    <ChevronDown className="h-4 w-4 ml-1" />
+                  </button>
+                </div>
+                
+                <div className="relative">
+                  <button 
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 bg-white rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    <Filter className="h-4 w-4 mr-2" />
+                    Filter
+                    <ChevronDown className="h-4 w-4 ml-1" />
+                  </button>
+                </div>
+                
+                {/* View Toggle */}
+                <div className="flex border border-gray-300 rounded-md overflow-hidden">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`inline-flex items-center px-3 py-2 text-sm font-medium ${viewMode === 'grid' ? 'bg-indigo-100 text-indigo-700' : 'bg-white text-gray-700 hover:bg-gray-50'}`}
+                  >
+                    <Grid3X3 className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`inline-flex items-center px-3 py-2 text-sm font-medium ${viewMode === 'list' ? 'bg-indigo-100 text-indigo-700' : 'bg-white text-gray-700 hover:bg-gray-50'}`}
+                  >
+                    <List className="h-4 w-4" />
+                  </button>
+                </div>
+                
+                {/* Search */}
+                <div className="relative flex-grow maxw-xs">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="h-4 w-4 text-gray-400" />
+                  </div>
+                  <input
+                    type="text"
+                    className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                    placeholder="Search games..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+              </div>
+            </div>
+          </div>
+
+            {/* Games Grid/List View */}
+            {filteredGames.length > 0 ? (
+              <div className={`${viewMode === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : 'space-y-4'}`}>
+                {filteredGames.map((game, index) => (
+                  viewMode === 'grid' ? 
+                    <GameCard key={game.id} game={game} index={index} /> : 
+                    <GameListItem key={game.id} game={game} index={index} />
+                ))}
+            </div>
+          ) : (
+              <div className="text-center py-16">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
+                  <Search className="h-8 w-8 text-gray-400" />
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-1">No games found</h3>
+                <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+                </div>
+            )}
+          </main>
+          
+          {/* Routes for our application */}
+          <Routes>
+            <Route path="/" element={<Navigate to={redirectPath} />} />
+            <Route path="/science" element={null} />
+            <Route path="/math" element={null} />
+            <Route path="/s1" element={<S1RainbowMaker />} />
+            <Route path="/s2" element={<S2_MoonMagicExplorer />} />
+            <Route path="/s3" element={<S3_LightningPower />} />
+            <Route path="/s4" element={<S4_SecretSoundJourney />} />
+            <Route path="/s5" element={<S5_WaterCycleAdventure />} />
+            <Route path="/m1" element={<M1_NumberMysteries />} />
+            <Route path="/m2" element={<M2_Magic9xFingerTrick />} />
+            <Route path="/m3" element={<M3_CodeGrid />} />
+            <Route path="/m4" element={<M4_PizzaFractions />} />
+            <Route path="/m5" element={<M5_MazeMaster />} />
+          </Routes>
+      </div>
       </AnimationProvider>
     );
   } else {
-    // Login screen
-    return (
-      <FullscreenManager>
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center">
-              <div className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                <GraduationCap className="h-10 w-10 text-white" />
-              </div>
-              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Learning Platform</h2>
-              <p className="mt-2 text-sm text-gray-600">
-                Sign in to access interactive educational games
-              </p>
+    // Login screen (unchanged)
+  return (
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+          <div className="text-center">
+            <div className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+              <GraduationCap className="h-10 w-10 text-white" />
             </div>
-            
-            <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-              <div className="rounded-md shadow-sm -space-y-px">
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email address</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                        id="email"
-                        name="email"
-                      type="email"
-                        autoComplete="email"
-                        required
-                        className={`appearance-none block w-full pl-10 pr-3 py-2 border ${errors.email ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
-                        placeholder="you@example.com"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      />
-                  </div>
-                  {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+            <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Learning Platform</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Sign in to access interactive educational games
+            </p>
+          </div>
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+            <div className="rounded-md shadow-sm -space-y-px">
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email address</label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <User className="h-5 w-5 text-gray-400" />
                 </div>
-
-                <div className="mb-4">
-                  <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Lock className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                        id="password"
-                      name="password"
-                        type={showPassword ? "text" : "password"}
-                        autoComplete="current-password"
-                        required
-                        className={`appearance-none block w-full pl-10 pr-10 py-2 border ${errors.password ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
-                        placeholder="Password"
-                      value={formData.password}
-                      onChange={handleInputChange}
-                    />
-                      <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                          className="text-gray-400 hover:text-gray-500 focus:outline-none"
-                        >
-                          {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                    </button>
-                      </div>
-                  </div>
-                  {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
+                <input
+                    id="email"
+                    name="email"
+                  type="email"
+                    autoComplete="email"
+                    required
+                    className={`appearance-none block w-full pl-10 pr-3 py-2 border ${errors.email ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+                    placeholder="you@example.com"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  />
                 </div>
-              </div>
+                {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+            </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Select Subject</label>
-                <div className="grid grid-cols-2 gap-4">
-                  <button
-                    type="button"
-                    className={`flex items-center justify-center px-4 py-3 border rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
-                      formData.subject === 'Math' 
-                        ? 'bg-blue-50 border-blue-500 text-blue-700' 
-                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                    }`}
-                    onClick={() => handleSubjectSelect('Math')}
-                  >
-                    <Calculator className={`h-5 w-5 ${formData.subject === 'Math' ? 'text-blue-500' : 'text-gray-500'} mr-2`} />
-                    Mathematics
-                  </button>
-                  <button
-                    type="button"
-                    className={`flex items-center justify-center px-4 py-3 border rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
-                      formData.subject === 'Science' 
-                        ? 'bg-purple-50 border-purple-500 text-purple-700' 
-                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                    }`}
-                    onClick={() => handleSubjectSelect('Science')}
-                  >
-                    <Atom className={`h-5 w-5 ${formData.subject === 'Science' ? 'text-purple-500' : 'text-gray-500'} mr-2`} />
-                    Science
-                  </button>
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Lock className="h-5 w-5 text-gray-400" />
                 </div>
-                {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
-              </div>
-
-              {errors.submit && (
-                <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <X className="h-5 w-5 text-red-400" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm text-red-700">
-                        {errors.submit}
-                      </p>
-                    </div>
+                <input
+                    id="password"
+                  name="password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="current-password"
+                    required
+                    className={`appearance-none block w-full pl-10 pr-10 py-2 border ${errors.password ? 'border-red-300' : 'border-gray-300'} rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+                    placeholder="Password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                />
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                      className="text-gray-400 hover:text-gray-500 focus:outline-none"
+                    >
+                      {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                </button>
                   </div>
                 </div>
-              )}
+                {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
+              </div>
+            </div>
 
-              <div>
-              <button
-                type="submit"
-                disabled={isLoading}
-                  className={`group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
-              >
-                {isLoading ? (
-                    <span className="flex items-center">
-                      <RefreshCw className="h-5 w-5 mr-2 animate-spin" />
-                      Signing in...
-                    </span>
-                  ) : (
-                    "Sign in"
-                )}
-              </button>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Select Subject</label>
+              <div className="grid grid-cols-2 gap-4">
+                <button
+                  type="button"
+                  className={`flex items-center justify-center px-4 py-3 border rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+                    formData.subject === 'Math' 
+                      ? 'bg-blue-50 border-blue-500 text-blue-700' 
+                      : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                  }`}
+                  onClick={() => handleSubjectSelect('Math')}
+                >
+                  <Calculator className={`h-5 w-5 ${formData.subject === 'Math' ? 'text-blue-500' : 'text-gray-500'} mr-2`} />
+                  Mathematics
+                </button>
+                <button
+                  type="button"
+                  className={`flex items-center justify-center px-4 py-3 border rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+                    formData.subject === 'Science' 
+                      ? 'bg-purple-50 border-purple-500 text-purple-700' 
+                      : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                  }`}
+                  onClick={() => handleSubjectSelect('Science')}
+                >
+                  <Atom className={`h-5 w-5 ${formData.subject === 'Science' ? 'text-purple-500' : 'text-gray-500'} mr-2`} />
+                  Science
+                </button>
               </div>
-              
-              <div className="text-center text-xs text-gray-500 mt-4">
-                <p>Demo credentials: savienglish@gmail.com / savi</p>
+              {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
+            </div>
+
+            {errors.submit && (
+              <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <X className="h-5 w-5 text-red-400" />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm text-red-700">
+                      {errors.submit}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </form>
-          </div>
+            )}
+
+            <div>
+            <button
+              type="submit"
+              disabled={isLoading}
+                className={`group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+            >
+              {isLoading ? (
+                  <span className="flex items-center">
+                    <RefreshCw className="h-5 w-5 mr-2 animate-spin" />
+                    Signing in...
+                  </span>
+                ) : (
+                  "Sign in"
+              )}
+            </button>
+            </div>
+            
+            <div className="text-center text-xs text-gray-500 mt-4">
+              <p>Demo credentials: savienglish@gmail.com / savi</p>
+            </div>
+          </form>
         </div>
-      </FullscreenManager>
-    );
+      </div>
+  );
   }
 }
 

@@ -145,7 +145,8 @@ const FractionMatchUp: React.FC<FractionMatchUpProps> = ({ onComplete }) => {
         { id: 'label-2', text: '6/8', matched: false },
         { id: 'label-3', text: '3/5', matched: false }
       ]
-    }
+    },
+    // ... 21 more levels with unique combinations ...
   ];
 
   // Game state

@@ -31,15 +31,18 @@ const QuizQuestions: React.FC<QuizQuestionsProps> = ({ questions, onComplete }) 
     setSelected(idx);
     setAnswered(true);
     setCorrect(idx === q.correct);
+    console.log('Answered:', idx, 'Correct:', idx === q.correct, 'Current index:', index);
     if (idx === q.correct) {
       setTimeout(() => {
         setAnswered(false);
         setSelected(null);
         setCorrect(false);
         if (index === questions.length - 1) {
+          console.log('Quiz complete, calling onComplete');
           onComplete && onComplete();
         } else {
           setIndex(index + 1);
+          console.log('Advancing to next question, new index:', index + 1);
         }
       }, 900);
     } else {

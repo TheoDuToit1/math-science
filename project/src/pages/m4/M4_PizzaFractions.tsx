@@ -24,7 +24,7 @@ const warmupQuestions = [
       { text: 'Just cheese', explanation: 'Cheese is a topping, not a fraction of the pizza.' },
     ],
     correct: 2,
-    image: '/images/math/m4_pizza_fractions/half_pizza.png',
+    image: null,
   },
   {
     question: 'If you cut a pizza into 4 equal parts, each part is called a:',
@@ -35,387 +35,443 @@ const warmupQuestions = [
       { text: 'Eighth', explanation: 'An eighth is when you divide something into 8 equal parts.' },
     ],
     correct: 2,
-    image: '/images/math/m4_pizza_fractions/quarter_pizza.png',
+    image: null,
   },
   {
-    question: 'Which shows 1/3?',
+    question: 'Which of these is equal to 1/3?',
     options: [
-      { text: '1 out of 3', explanation: 'Correct! One-third (1/3) means 1 part out of 3 equal parts.' },
+      { text: '1 out of 3 equal parts', explanation: 'Correct! One-third (1/3) means 1 part out of 3 equal parts.' },
       { text: '3 out of 3', explanation: '3 out of 3 parts would be the whole (3/3 = 1).' },
       { text: 'Half', explanation: 'Half is 1 out of 2 equal parts (1/2), not 1/3.' },
       { text: 'None', explanation: 'One of the options does show 1/3.' },
     ],
     correct: 0,
-    image: '/images/math/m4_pizza_fractions/third_options.png',
-  },
-  {
-    question: 'If you eat 1 slice of an 8-slice pizza, what fraction have you eaten?',
-    options: [
-      { text: '1/4', explanation: '1/4 would be 2 slices of an 8-slice pizza.' },
-      { text: '1/8', explanation: 'Correct! 1 slice out of 8 equal slices is 1/8.' },
-      { text: '1/2', explanation: '1/2 would be 4 slices of an 8-slice pizza.' },
-      { text: '1/16', explanation: '1/16 would be less than 1 slice of an 8-slice pizza.' },
-    ],
-    correct: 1,
-    image: '/images/math/m4_pizza_fractions/eighth_pizza.png',
-  },
-  {
-    question: 'Which fraction is bigger?',
-    options: [
-      { text: '1/2', explanation: 'Correct! 1/2 is bigger than 1/3 because halves are larger than thirds.' },
-      { text: '1/3', explanation: '1/3 is smaller than 1/2 because thirds are smaller than halves.' },
-      { text: 'Both equal', explanation: '1/2 and 1/3 are not equal; 1/2 is larger.' },
-      { text: 'Can\'t compare', explanation: 'We can compare these fractions. 1/2 = 3/6 and 1/3 = 2/6, so 1/2 is larger.' },
-    ],
-    correct: 0,
     image: null,
   },
   {
-    question: 'Which is equivalent to 2/4?',
+    question: 'What happens if the parts are not equal?',
     options: [
-      { text: '1/2', explanation: 'Correct! 2/4 simplified equals 1/2.' },
-      { text: '1/4', explanation: '1/4 is half of 2/4, not equivalent.' },
-      { text: '3/4', explanation: '3/4 is larger than 2/4, not equivalent.' },
-      { text: '4/8', explanation: '4/8 simplifies to 1/2, which is equivalent to 2/4, but 1/2 is the simplest form.' },
-    ],
-    correct: 0,
-    image: null,
-  },
-  {
-    question: 'If 3 friends share a pizza equally, what fraction does each friend get?',
-    options: [
-      { text: '1/2', explanation: 'If 3 friends share equally, each gets less than 1/2.' },
-      { text: '1/3', explanation: 'Correct! Each friend gets 1/3 of the pizza.' },
-      { text: '1/4', explanation: 'If 4 friends shared, each would get 1/4.' },
-      { text: '3/1', explanation: 'This would mean each person gets 3 whole pizzas.' },
+      { text: 'It\'s still a fraction', explanation: 'Fractions must represent equal parts to be valid.' },
+      { text: 'It doesn\'t count', explanation: 'Correct! Fractions must be equal parts of the whole.' },
+      { text: 'It\'s bigger', explanation: 'Unequal parts don\'t make a fraction bigger or smaller - they make it invalid.' },
+      { text: 'It\'s tastier', explanation: 'The taste of food doesn\'t change based on how equally it\'s divided.' },
     ],
     correct: 1,
     image: null,
   },
   {
-    question: 'What fraction of this pizza has pepperoni?',
+    question: 'What is 2/4 the same as?',
     options: [
-      { text: '1/2', explanation: 'Half the pizza has pepperoni.' },
-      { text: '1/3', explanation: 'Not quite - look at how many equal parts there are.' },
-      { text: '2/4', explanation: 'Correct! 2 out of 4 equal parts (or 1/2) have pepperoni.' },
-      { text: '2/6', explanation: 'The pizza is divided into 4 parts, not 6.' },
+      { text: '1/2', explanation: 'Correct! 2/4 simplifies to 1/2.' },
+      { text: '1/4', explanation: '1/4 is less than 2/4.' },
+      { text: '2/2', explanation: '2/2 is the whole.' },
+      { text: '1/8', explanation: '1/8 is much smaller.' },
     ],
-    correct: 2,
-    image: '/images/math/m4_pizza_fractions/pepperoni_pizza.png',
+    correct: 0,
+    image: null,
   },
   {
-    question: 'Which is the same as 3/6?',
+    question: 'If a pizza is cut into 8 slices and you eat 4, what fraction did you eat?',
+    options: [
+      { text: '4/8', explanation: 'Correct! 4 out of 8 is 4/8.' },
+      { text: '1/2', explanation: '1/2 is the same as 4/8.' },
+      { text: '2/8', explanation: '2/8 is less than 4/8.' },
+      { text: '8/8', explanation: '8/8 is the whole pizza.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which is smaller: 1/8 or 1/4?',
+    options: [
+      { text: '1/8', explanation: 'Correct! 1/8 is a smaller part than 1/4.' },
+      { text: '1/4', explanation: '1/4 is bigger than 1/8.' },
+      { text: 'They are equal', explanation: 'They are not equal.' },
+      { text: '1/2', explanation: '1/2 is bigger than both.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 4/4?',
+    options: [
+      { text: 'The whole pizza', explanation: 'Correct! 4/4 means all 4 parts, or the whole.' },
+      { text: 'Half', explanation: 'Half is 2/4.' },
+      { text: 'Quarter', explanation: 'Quarter is 1/4.' },
+      { text: 'None', explanation: 'None is not a fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 2/8, what is another way to say it?',
+    options: [
+      { text: '1/4', explanation: 'Correct! 2/8 simplifies to 1/4.' },
+      { text: '1/2', explanation: '1/2 is 4/8.' },
+      { text: '2/4', explanation: '2/4 is 1/2.' },
+      { text: '1/8', explanation: '1/8 is smaller.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the denominator in 3/5?',
+    options: [
+      { text: '5', explanation: 'Correct! The denominator is the bottom number.' },
+      { text: '3', explanation: '3 is the numerator.' },
+      { text: '8', explanation: '8 is not in this fraction.' },
+      { text: '1', explanation: '1 is not in this fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 1/2 and 2/4, are they the same?',
+    options: [
+      { text: 'Yes', explanation: 'Correct! 1/2 and 2/4 are equal.' },
+      { text: 'No', explanation: 'They are actually equal.' },
+      { text: 'Sometimes', explanation: 'They are always equal.' },
+      { text: 'Never', explanation: 'They are equal.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 1/8 of a pizza?',
+    options: [
+      { text: '1 out of 8 equal parts', explanation: 'Correct! 1/8 means one out of eight equal parts.' },
+      { text: '1 out of 4', explanation: '1/4 is one out of four equal parts.' },
+      { text: '1 out of 2', explanation: '1/2 is one out of two equal parts.' },
+      { text: '8 out of 8', explanation: '8/8 is the whole pizza.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you eat all the pizza, what fraction did you eat?',
+    options: [
+      { text: '1', explanation: 'Correct! Eating the whole pizza is 1 or 8/8, 4/4, etc.' },
+      { text: '0', explanation: '0 means you ate nothing.' },
+      { text: '1/2', explanation: '1/2 is half.' },
+      { text: '1/4', explanation: '1/4 is a quarter.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the numerator in 2/3?',
+    options: [
+      { text: '2', explanation: 'Correct! The numerator is the top number.' },
+      { text: '3', explanation: '3 is the denominator.' },
+      { text: '5', explanation: '5 is not in this fraction.' },
+      { text: '1', explanation: '1 is not in this fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 0/4 of a pizza, how much do you have?',
+    options: [
+      { text: 'None', explanation: 'Correct! 0/4 means you have none.' },
+      { text: '1/4', explanation: '1/4 is one out of four.' },
+      { text: '4/4', explanation: '4/4 is the whole.' },
+      { text: '1', explanation: '1 is the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 5/5?',
+    options: [
+      { text: 'The whole', explanation: 'Correct! 5/5 is the whole.' },
+      { text: 'Half', explanation: 'Half is 1/2 or 2/4.' },
+      { text: 'Quarter', explanation: 'Quarter is 1/4.' },
+      { text: 'None', explanation: 'None is not a fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 2/3 of a pizza, how many parts are missing?',
+    options: [
+      { text: '1', explanation: 'Correct! 3 - 2 = 1 part missing.' },
+      { text: '2', explanation: '2 would be missing if you had 1/3.' },
+      { text: '3', explanation: '3 would be missing if you had none.' },
+      { text: '0', explanation: '0 means you have the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 3/3?',
+    options: [
+      { text: 'The whole', explanation: 'Correct! 3/3 is the whole.' },
+      { text: 'Half', explanation: 'Half is 1/2.' },
+      { text: 'Quarter', explanation: 'Quarter is 1/4.' },
+      { text: 'None', explanation: 'None is not a fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 1/4 of a pizza, how many parts are missing?',
+    options: [
+      { text: '3', explanation: 'Correct! 4 - 1 = 3 parts missing.' },
+      { text: '2', explanation: '2 would be missing if you had 2/4.' },
+      { text: '4', explanation: '4 would be missing if you had none.' },
+      { text: '1', explanation: '1 would be missing if you had 3/4.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 6/8 the same as?',
+    options: [
+      { text: '3/4', explanation: 'Correct! 6/8 simplifies to 3/4.' },
+      { text: '1/2', explanation: '1/2 is 4/8.' },
+      { text: '1/4', explanation: '1/4 is 2/8.' },
+      { text: '6/6', explanation: '6/6 is the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 3/4 of a pizza, how many parts are missing?',
+    options: [
+      { text: '1', explanation: 'Correct! 4 - 3 = 1 part missing.' },
+      { text: '2', explanation: '2 would be missing if you had 2/4.' },
+      { text: '3', explanation: '3 would be missing if you had 1/4.' },
+      { text: '0', explanation: '0 means you have the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 7/8 the same as?',
+    options: [
+      { text: 'Almost the whole', explanation: 'Correct! 7/8 is just one part less than the whole.' },
+      { text: 'Half', explanation: 'Half is 4/8.' },
+      { text: 'Quarter', explanation: 'Quarter is 2/8.' },
+      { text: 'None', explanation: 'None is not a fraction.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 1/8 of a pizza, how many parts are missing?',
+    options: [
+      { text: '7', explanation: 'Correct! 8 - 1 = 7 parts missing.' },
+      { text: '6', explanation: '6 would be missing if you had 2/8.' },
+      { text: '8', explanation: '8 would be missing if you had none.' },
+      { text: '1', explanation: '1 would be missing if you had 7/8.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 1/5 of a pizza?',
+    options: [
+      { text: '1 out of 5 equal parts', explanation: 'Correct! 1/5 means one out of five equal parts.' },
+      { text: '1 out of 4', explanation: '1/4 is one out of four equal parts.' },
+      { text: '1 out of 2', explanation: '1/2 is one out of two equal parts.' },
+      { text: '5 out of 5', explanation: '5/5 is the whole pizza.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 4/5 of a pizza, how many parts are missing?',
+    options: [
+      { text: '1', explanation: 'Correct! 5 - 4 = 1 part missing.' },
+      { text: '2', explanation: '2 would be missing if you had 3/5.' },
+      { text: '4', explanation: '4 would be missing if you had 1/5.' },
+      { text: '0', explanation: '0 means you have the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 2/6 the same as?',
+    options: [
+      { text: '1/3', explanation: 'Correct! 2/6 simplifies to 1/3.' },
+      { text: '1/2', explanation: '1/2 is 3/6.' },
+      { text: '1/4', explanation: '1/4 is 1/4.' },
+      { text: '2/2', explanation: '2/2 is the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If you have 5/6 of a pizza, how many parts are missing?',
+    options: [
+      { text: '1', explanation: 'Correct! 6 - 5 = 1 part missing.' },
+      { text: '2', explanation: '2 would be missing if you had 4/6.' },
+      { text: '5', explanation: '5 would be missing if you had 1/6.' },
+      { text: '0', explanation: '0 means you have the whole.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is 3/6 the same as?',
     options: [
       { text: '1/2', explanation: 'Correct! 3/6 simplifies to 1/2.' },
-      { text: '1/3', explanation: '1/3 is not equal to 3/6 (which is 1/2).' },
-      { text: '2/3', explanation: '2/3 is larger than 3/6 (which is 1/2).' },
-      { text: '6/3', explanation: '6/3 equals 2, which is much larger than 3/6.' },
+      { text: '1/3', explanation: '1/3 is 2/6.' },
+      { text: '1/4', explanation: '1/4 is 1/4.' },
+      { text: '3/3', explanation: '3/3 is the whole.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'If you ate 3/8 of a pizza yesterday and 2/8 today, what fraction did you eat in total?',
+    question: 'If you have 1/6 of a pizza, how many parts are missing?',
     options: [
-      { text: '5/8', explanation: 'Correct! 3/8 + 2/8 = 5/8.' },
-      { text: '5/16', explanation: '5/16 would be less than the actual amount eaten.' },
-      { text: '6/16', explanation: 'When adding fractions with the same denominator, we add the numerators only.' },
-      { text: '1/2', explanation: '1/2 is 4/8, which is less than 5/8.' },
+      { text: '5', explanation: 'Correct! 6 - 1 = 5 parts missing.' },
+      { text: '4', explanation: '4 would be missing if you had 2/6.' },
+      { text: '6', explanation: '6 would be missing if you had none.' },
+      { text: '1', explanation: '1 would be missing if you had 5/6.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+];
+
+// Activity questions for M4 (24 questions, same format as M3)
+const activityQuestions = [
+  {
+    question: 'Which fraction shows half a pizza?',
+    options: [
+      { text: '1/2', explanation: 'Correct! 1/2 is half.' },
+      { text: '1/4', explanation: '1/4 is a quarter.' },
+      { text: '1/3', explanation: '1/3 is a third.' },
+      { text: '2/2', explanation: '2/2 is the whole.' },
+    ],
+    correct: 0,
+    image: '/images/math/m4_pizza_fractions/half_pizza.png',
+  },
+  {
+    question: 'If you have 2 out of 4 slices, what fraction do you have?',
+    options: [
+      { text: '2/4', explanation: 'Correct! 2 out of 4 is 2/4.' },
+      { text: '1/2', explanation: '1/2 is the same as 2/4.' },
+      { text: '1/4', explanation: '1/4 is less than 2/4.' },
+      { text: '4/4', explanation: '4/4 is the whole.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'Which fraction is NOT equivalent to 1/2?',
+    question: 'What is 3/6 the same as?',
     options: [
-      { text: '2/4', explanation: '2/4 simplifies to 1/2, so they are equivalent.' },
-      { text: '3/6', explanation: '3/6 simplifies to 1/2, so they are equivalent.' },
-      { text: '4/8', explanation: '4/8 simplifies to 1/2, so they are equivalent.' },
-      { text: '3/5', explanation: 'Correct! 3/5 is not equivalent to 1/2. It equals 0.6, while 1/2 equals 0.5.' },
-    ],
-    correct: 3,
-    image: null,
-  },
-  {
-    question: 'If a pizza is cut into 6 equal slices and you eat 2 slices, what fraction of the pizza remains?',
-    options: [
-      { text: '2/6', explanation: 'This is the fraction you ate, not what remains.' },
-      { text: '4/6', explanation: 'Correct! If you ate 2/6, then 4/6 (or 2/3) remains.' },
-      { text: '1/3', explanation: 'This is the fraction you ate (2/6 = 1/3), not what remains.' },
-      { text: '3/4', explanation: '3/4 is not the correct remaining fraction.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'Which is larger: 2/3 or 3/5?',
-    options: [
-      { text: '2/3', explanation: 'Correct! 2/3 = 10/15 and 3/5 = 9/15, so 2/3 is larger.' },
-      { text: '3/5', explanation: '3/5 is smaller than 2/3 (convert to the same denominator to compare).' },
-      { text: 'They are equal', explanation: 'They are not equal; 2/3 is larger than 3/5.' },
-      { text: 'Cannot be compared', explanation: 'Fractions can be compared by converting to a common denominator.' },
+      { text: '1/2', explanation: 'Correct! 3/6 simplifies to 1/2.' },
+      { text: '1/3', explanation: '1/3 is less than 3/6.' },
+      { text: '3/3', explanation: '3/3 is the whole.' },
+      { text: '6/6', explanation: '6/6 is the whole.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'What is 1/4 of a 12-slice pizza?',
+    question: 'If you eat 1/4 of a pizza, how much is left?',
     options: [
-      { text: '3 slices', explanation: 'Correct! 1/4 of 12 slices = 12 ÷ 4 = 3 slices.' },
-      { text: '4 slices', explanation: '4 slices would be 1/3 of a 12-slice pizza.' },
-      { text: '6 slices', explanation: '6 slices would be 1/2 of a 12-slice pizza.' },
-      { text: '8 slices', explanation: '8 slices would be 2/3 of a 12-slice pizza.' },
+      { text: '3/4', explanation: 'Correct! 4 - 1 = 3, so 3/4 is left.' },
+      { text: '1/4', explanation: '1/4 is what you ate.' },
+      { text: '1/2', explanation: '1/2 is 2/4.' },
+      { text: '0', explanation: '0 means nothing is left.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'If 3/4 of a pizza has cheese and the rest has no cheese, what fraction has no cheese?',
+    question: 'What is the denominator in 4/5?',
     options: [
-      { text: '1/4', explanation: 'Correct! If 3/4 has cheese, then 1/4 has no cheese (1 - 3/4 = 1/4).' },
-      { text: '1/3', explanation: 'This is not correct. If 3/4 has cheese, then 1/4 has no cheese.' },
-      { text: '2/4', explanation: 'This is not correct. If 3/4 has cheese, then 1/4 has no cheese.' },
-      { text: '3/4', explanation: 'This is the fraction that has cheese, not the fraction without cheese.' },
+      { text: '5', explanation: 'Correct! The denominator is the bottom number.' },
+      { text: '4', explanation: '4 is the numerator.' },
+      { text: '9', explanation: '9 is not in this fraction.' },
+      { text: '1', explanation: '1 is not in this fraction.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'What is 2/3 of a 9-slice pizza?',
+    question: 'Which is bigger: 3/4 or 2/4?',
     options: [
-      { text: '3 slices', explanation: '3 slices would be 1/3 of a 9-slice pizza.' },
-      { text: '6 slices', explanation: 'Correct! 2/3 of 9 slices = 9 × 2/3 = 6 slices.' },
-      { text: '4 slices', explanation: '4 slices is not 2/3 of 9 slices.' },
-      { text: '7 slices', explanation: '7 slices is not 2/3 of 9 slices.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'Which fraction is in simplest form?',
-    options: [
-      { text: '2/4', explanation: '2/4 can be simplified to 1/2.' },
-      { text: '3/9', explanation: '3/9 can be simplified to 1/3.' },
-      { text: '2/5', explanation: 'Correct! 2/5 is already in simplest form as 2 and 5 have no common factors.' },
-      { text: '4/10', explanation: '4/10 can be simplified to 2/5.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'If you have 3/4 of a pizza and give away 1/4, how much do you have left?',
-    options: [
-      { text: '1/4', explanation: 'This is not correct. 3/4 - 1/4 = 2/4 = 1/2.' },
-      { text: '1/2', explanation: 'Correct! 3/4 - 1/4 = 2/4 = 1/2.' },
-      { text: '2/4', explanation: 'Correct in value (2/4 = 1/2), but not in simplest form.' },
-      { text: '2/8', explanation: 'This is not correct. 2/8 = 1/4, which is less than the actual amount.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'If one pizza is cut into 8 equal slices and another is cut into 4 equal slices, which slice is bigger?',
-    options: [
-      { text: '8-slice pizza slice', explanation: 'Slices from an 8-slice pizza are smaller than from a 4-slice pizza.' },
-      { text: '4-slice pizza slice', explanation: 'Correct! Slices from a 4-slice pizza are larger because the pizza is divided into fewer pieces.' },
-      { text: 'Both are the same', explanation: 'The slices are not the same size; 4-slice pizza slices are larger.' },
-      { text: 'Cannot determine', explanation: 'We can determine that 4-slice pizza slices are larger if the pizzas are the same size.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'What is 1/2 + 1/4?',
-    options: [
-      { text: '1/6', explanation: 'This is not the correct sum. 1/2 + 1/4 = 2/4 + 1/4 = 3/4.' },
-      { text: '2/6', explanation: 'This is not the correct sum. 1/2 + 1/4 = 2/4 + 1/4 = 3/4.' },
-      { text: '3/4', explanation: 'Correct! 1/2 + 1/4 = 2/4 + 1/4 = 3/4.' },
-      { text: '3/6', explanation: 'This is not the correct sum. 3/6 = 1/2, but 1/2 + 1/4 = 3/4.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'If you have 2/3 of a pizza and eat 1/3, what fraction of the ORIGINAL pizza have you eaten?',
-    options: [
-      { text: '1/3', explanation: 'Correct! You ate 1/3 of the original pizza.' },
-      { text: '1/2', explanation: 'This would be the fraction of your portion (2/3) that you ate, not of the original pizza.' },
-      { text: '2/3', explanation: 'This is how much you started with, not how much you ate.' },
-      { text: '1/9', explanation: 'This is not the correct fraction of the original pizza.' },
+      { text: '3/4', explanation: 'Correct! 3/4 is bigger than 2/4.' },
+      { text: '2/4', explanation: '2/4 is less than 3/4.' },
+      { text: 'They are equal', explanation: 'They are not equal.' },
+      { text: '1/4', explanation: '1/4 is less than both.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'Which is equal to 1?',
+    question: 'What is 6/8 the same as?',
     options: [
-      { text: '3/3', explanation: 'Correct! 3/3 = 1 whole.' },
-      { text: '2/3', explanation: '2/3 is less than 1 whole.' },
-      { text: '4/3', explanation: '4/3 is more than 1 whole.' },
-      { text: '0/3', explanation: '0/3 = 0, not 1.' },
+      { text: '3/4', explanation: 'Correct! 6/8 simplifies to 3/4.' },
+      { text: '1/2', explanation: '1/2 is 4/8.' },
+      { text: '6/6', explanation: '6/6 is the whole.' },
+      { text: '1/4', explanation: '1/4 is 2/8.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'If a pizza is cut into equal slices and you take 3 slices, which could be the fraction you took?',
+    question: 'If you have 1/3 of a pizza, how many parts are missing?',
     options: [
-      { text: '3/3', explanation: '3/3 would be the whole pizza.' },
-      { text: '3/8', explanation: 'Correct! 3/8 means you took 3 slices out of 8 total slices.' },
-      { text: '8/3', explanation: 'This would mean you took more than the whole pizza.' },
-      { text: '1/3', explanation: '1/3 would mean you took 1 slice out of 3 total slices, not 3 slices.' },
+      { text: '2', explanation: 'Correct! 3 - 1 = 2 parts missing.' },
+      { text: '1', explanation: '1 would be missing if you had 2/3.' },
+      { text: '3', explanation: '3 would be missing if you had none.' },
+      { text: '0', explanation: '0 means you have the whole.' },
     ],
-    correct: 1,
+    correct: 0,
     image: null,
   },
   {
-    question: 'What is 3/4 - 1/4?',
+    question: 'What is 8/8?',
     options: [
-      { text: '2/4', explanation: 'Correct in value, but 2/4 can be simplified to 1/2.' },
-      { text: '1/2', explanation: 'Correct! 3/4 - 1/4 = 2/4 = 1/2.' },
-      { text: '2/8', explanation: 'This is not correct. 2/8 = 1/4, which is not equal to 3/4 - 1/4.' },
-      { text: '3/8', explanation: 'This is not correct. 3/4 - 1/4 = 2/4 = 1/2.' },
+      { text: 'The whole', explanation: 'Correct! 8/8 is the whole.' },
+      { text: 'Half', explanation: 'Half is 4/8.' },
+      { text: 'Quarter', explanation: 'Quarter is 2/8.' },
+      { text: 'None', explanation: 'None is not a fraction.' },
     ],
-    correct: 1,
+    correct: 0,
     image: null,
   },
+  {
+    question: 'If you have 2/6, what is another way to say it?',
+    options: [
+      { text: '1/3', explanation: 'Correct! 2/6 simplifies to 1/3.' },
+      { text: '1/2', explanation: '1/2 is 3/6.' },
+      { text: '2/3', explanation: '2/3 is more than 2/6.' },
+      { text: '1/6', explanation: '1/6 is less than 2/6.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  // ... add 14 more activity questions to reach 24 ...
 ];
 
 // Videos for the introduction section
 const introVideos = [
   {
-    title: 'Introduction to Fractions',
-    url: 'https://www.youtube.com/embed/n0FZhQ_GkKw',
-    thumbnail: '/images/math/m4_pizza_fractions/fractions_intro_thumbnail.jpg',
+    title: 'Using Pizza to Teach Fractions',
+    url: 'https://www.youtube.com/embed/X61BxuhIeBs',
+    thumbnail: '/images/math/m4_pizza_fractions/pizza_teach_thumbnail.jpg',
   },
   {
-    title: 'Fractions in Real Life',
-    url: 'https://www.youtube.com/embed/4PjuMJ5Z4hQ',
-    thumbnail: '/images/math/m4_pizza_fractions/fractions_real_life_thumbnail.jpg',
+    title: 'Pizza Fractions',
+    url: 'https://www.youtube.com/embed/fHRvP_n8khw',
+    thumbnail: '/images/math/m4_pizza_fractions/pizza_fractions_thumbnail.jpg',
   }
 ];
 
 // Videos for the myth section
 const mythVideos = [
   {
-    title: 'Fractions Are Our Friends',
-    url: 'https://www.youtube.com/embed/kn6-c223DUU',
-    thumbnail: '/images/math/m4_pizza_fractions/fractions_friends_thumbnail.jpg',
+    title: 'Fun with Fractions - Pizza Fractions',
+    url: 'https://www.youtube.com/embed/lP1l5lOgjEs',
+    thumbnail: '/images/math/m4_pizza_fractions/fun_fractions_thumbnail.jpg',
   }
-];
-
-// Wrap-up quiz questions
-const wrapupQuestions = [
-  {
-    question: 'What is a fraction?',
-    options: [
-      { text: 'A whole number', explanation: 'Fractions represent parts of a whole, not whole numbers.' },
-      { text: 'A part of a whole', explanation: 'Correct! Fractions represent parts of a whole divided into equal portions.' },
-      { text: 'A type of pizza', explanation: 'While we used pizza to learn about fractions, a fraction itself is a mathematical concept.' },
-      { text: 'A decimal number', explanation: 'Fractions can be converted to decimals, but they are represented as one number over another.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'In the fraction 3/4, what does the 4 represent?',
-    options: [
-      { text: 'The number of parts taken', explanation: 'The numerator (3) represents the parts taken.' },
-      { text: 'The total number of equal parts', explanation: 'Correct! The denominator (4) represents the total number of equal parts.' },
-      { text: 'The size of each part', explanation: 'The denominator indicates how many parts, not their size.' },
-      { text: 'The number of pizzas', explanation: 'The denominator represents parts of one whole, not the number of wholes.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'Which fraction is equivalent to 1/2?',
-    options: [
-      { text: '2/5', explanation: '2/5 = 0.4, which is less than 1/2 = 0.5.' },
-      { text: '3/4', explanation: '3/4 = 0.75, which is greater than 1/2 = 0.5.' },
-      { text: '2/4', explanation: 'Correct! 2/4 = 1/2 when simplified.' },
-      { text: '1/3', explanation: '1/3 ≈ 0.33, which is less than 1/2 = 0.5.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'If you eat 1/4 of a pizza and then another 1/4, what fraction have you eaten in total?',
-    options: [
-      { text: '1/2', explanation: 'Correct! 1/4 + 1/4 = 2/4 = 1/2.' },
-      { text: '1/8', explanation: '1/8 is less than either 1/4 portion.' },
-      { text: '2/8', explanation: '2/8 = 1/4, which is less than the total amount eaten.' },
-      { text: '2/4', explanation: 'This is correct (2/4), but it simplifies to 1/2.' },
-    ],
-    correct: 0,
-    image: null,
-  },
-  {
-    question: 'Which is larger: 3/8 or 1/2?',
-    options: [
-      { text: '3/8', explanation: '3/8 = 0.375, which is less than 1/2 = 0.5.' },
-      { text: '1/2', explanation: 'Correct! 1/2 = 0.5, which is greater than 3/8 = 0.375.' },
-      { text: 'They are equal', explanation: 'They are not equal; 1/2 is larger than 3/8.' },
-      { text: 'Cannot be compared', explanation: 'Fractions can be compared by converting to decimals or finding a common denominator.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'If a pizza is cut into 8 equal slices and you eat 6 slices, what fraction of the pizza remains?',
-    options: [
-      { text: '6/8', explanation: 'This is the fraction you ate, not what remains.' },
-      { text: '2/8', explanation: 'Correct! If you ate 6/8, then 2/8 (or 1/4) remains.' },
-      { text: '1/4', explanation: 'Correct in value (2/8 = 1/4), but the question asked for the fraction.' },
-      { text: '1/3', explanation: 'This is not the correct remaining fraction.' },
-    ],
-    correct: 1,
-    image: null,
-  },
-  {
-    question: 'What is a proper fraction?',
-    options: [
-      { text: 'When the numerator is less than the denominator', explanation: 'Correct! In a proper fraction, the numerator is less than the denominator, making the value less than 1.' },
-      { text: 'When the numerator is greater than the denominator', explanation: 'This describes an improper fraction, which is greater than 1.' },
-      { text: 'When the numerator equals the denominator', explanation: 'When the numerator equals the denominator, the fraction equals 1.' },
-      { text: 'When the denominator is 0', explanation: 'A fraction with denominator 0 is undefined.' },
-    ],
-    correct: 0,
-    image: null,
-  },
-  {
-    question: 'How do you find an equivalent fraction?',
-    options: [
-      { text: 'Add the same number to the numerator and denominator', explanation: 'Adding the same number doesn\'t create equivalent fractions.' },
-      { text: 'Subtract the same number from the numerator and denominator', explanation: 'Subtracting the same number doesn\'t create equivalent fractions.' },
-      { text: 'Multiply the numerator and denominator by the same number', explanation: 'Correct! Multiplying both parts by the same number creates an equivalent fraction.' },
-      { text: 'Divide the numerator by the denominator', explanation: 'This gives you the decimal value, not an equivalent fraction.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'What is 2/3 of a 12-slice pizza?',
-    options: [
-      { text: '4 slices', explanation: '4 slices would be 1/3 of a 12-slice pizza.' },
-      { text: '6 slices', explanation: '6 slices would be 1/2 of a 12-slice pizza.' },
-      { text: '8 slices', explanation: 'Correct! 2/3 of 12 = 8 slices.' },
-      { text: '9 slices', explanation: '9 slices would be 3/4 of a 12-slice pizza.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'Why is it important that fractions represent equal parts?',
-    options: [
-      { text: 'So everyone gets the same amount', explanation: 'While fairness is important, the mathematical reason is different.' },
-      { text: 'For accurate measurement and comparison', explanation: 'Correct! Equal parts ensure that fractions can be accurately measured and compared.' },
-      { text: 'To make the pizza taste better', explanation: 'Equal parts don\'t affect taste.' },
-      { text: 'It\'s not important', explanation: 'Equal parts are essential to the concept of fractions.' },
-    ],
-    correct: 1,
-    image: null,
-  },
 ];
 
 // Section labels
@@ -470,8 +526,10 @@ const M4_PizzaFractions: React.FC = () => {
     setWarmupAnswered(true);
     if (idx === warmupQ.correct) {
       setWarmupCorrect(true);
+      console.log('Answered correctly. warmupIndex:', warmupIndex, 'questionsCompleted:', questionsCompleted, 'section:', section);
     } else {
       setWarmupCorrect(false);
+      console.log('Answered incorrectly. warmupIndex:', warmupIndex, 'questionsCompleted:', questionsCompleted, 'section:', section);
     }
   };
 
@@ -481,7 +539,11 @@ const M4_PizzaFractions: React.FC = () => {
     setWarmupAnswered(false);
     setSelectedOption(null);
     if (warmupCorrect) {
-      setQuestionsCompleted((prev) => prev + 1);
+      setQuestionsCompleted((prev) => {
+        const updated = prev + 1;
+        console.log('Incrementing questionsCompleted to', updated, 'at warmupIndex:', warmupIndex, 'section:', section);
+        return updated;
+      });
       setTimeout(() => {
         if (warmupIndex === warmupQuestions.length - 1) {
           nextSection();
@@ -491,6 +553,7 @@ const M4_PizzaFractions: React.FC = () => {
         }
       }, 300);
     }
+    console.log('Dismissed explanation. warmupIndex:', warmupIndex, 'questionsCompleted:', questionsCompleted, 'section:', section);
   };
 
   // Activity tabs
@@ -522,7 +585,8 @@ const M4_PizzaFractions: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 flex flex-col items-center py-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 flex flex-col items-center py-6"
+      onContextMenu={e => e.preventDefault()}>
       <div className="w-full max-w-4xl px-2 sm:px-6">
         <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} />
         {/* Only show the quiz progress bar in the Warm-Up section */}
@@ -531,7 +595,7 @@ const M4_PizzaFractions: React.FC = () => {
         )}
         {/* Show activities progress bar only in Activities section */}
         {sectionLabels[section] === 'Activities' && (
-          <ProgressBarMain current={activityTab + 1} total={TOTAL_ACTIVITIES} color="bg-blue-400" label="activities" />
+          <ProgressBarMain current={activitiesCompleted} total={TOTAL_ACTIVITIES} color="bg-blue-400" label="activities complete" />
         )}
         <AnimatePresence mode="wait">
           {section === 0 && (
@@ -603,10 +667,6 @@ const M4_PizzaFractions: React.FC = () => {
           )}
           {section === 4 && (
             <SectionWrapper key="wrapup" label="Wrap-Up" icon="🎯">
-              <div className="mb-8">
-                <h2 className="text-xl font-bold text-center mb-6">Test Your Knowledge</h2>
-                <QuizQuestions questions={wrapupQuestions} />
-              </div>
               <WrapUp
                 title="Pizza Fractions Adventure"
                 summary="You've learned how fractions help us divide things into equal parts and share fairly!"

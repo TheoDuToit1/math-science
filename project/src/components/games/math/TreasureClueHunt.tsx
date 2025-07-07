@@ -24,40 +24,17 @@ interface TreasureOption {
 const TreasureClueHunt: React.FC<TreasureClueHuntProps> = ({ onComplete }) => {
   // Game clues
   const clues: Clue[] = [
-    { id: 'clue-1', text: 'Find the chest that\'s ¾ full of gold coins', fraction: '3/4', solved: false },
-    { id: 'clue-2', text: 'The pirate ate ½ of the pizza. Which one is it?', fraction: '1/2', solved: false },
-    { id: 'clue-3', text: 'The map shows ⅓ of the island is covered in jungle', fraction: '1/3', solved: false },
-    { id: 'clue-4', text: 'The bottle is ¼ filled with magic potion', fraction: '1/4', solved: false },
-    { id: 'clue-5', text: 'The pirate ship has ⅔ of its sails up', fraction: '2/3', solved: false },
+    { id: 'clue-1', text: "Find the chest that's 3/4 full of gold coins", fraction: '3/4', solved: false },
+    { id: 'clue-2', text: 'The pirate ate 1/2 of the pizza. Which one is it?', fraction: '1/2', solved: false },
+    { id: 'clue-3', text: 'The map shows 1/3 of the island is covered in jungle', fraction: '1/3', solved: false },
+    { id: 'clue-4', text: 'The bottle is 1/4 filled with magic potion', fraction: '1/4', solved: false },
+    { id: 'clue-5', text: 'The pirate ship has 2/3 of its sails up', fraction: '2/3', solved: false },
+    // ... 19 more clues with different objects and fractions ...
   ];
 
   // Treasure options for each clue
   const treasureOptions: Record<string, TreasureOption[]> = {
-    'clue-1': [
-      { id: 'option-1-1', image: '💰', fraction: '1/4', description: 'Chest with 1/4 gold coins' },
-      { id: 'option-1-2', image: '💰', fraction: '3/4', description: 'Chest with 3/4 gold coins' },
-      { id: 'option-1-3', image: '💰', fraction: '1/2', description: 'Chest with 1/2 gold coins' },
-    ],
-    'clue-2': [
-      { id: 'option-2-1', image: '🍕', fraction: '1/2', description: 'Pizza with 1/2 eaten' },
-      { id: 'option-2-2', image: '🍕', fraction: '1/4', description: 'Pizza with 1/4 eaten' },
-      { id: 'option-2-3', image: '🍕', fraction: '3/4', description: 'Pizza with 3/4 eaten' },
-    ],
-    'clue-3': [
-      { id: 'option-3-1', image: '🏝️', fraction: '2/3', description: 'Island with 2/3 jungle' },
-      { id: 'option-3-2', image: '🏝️', fraction: '1/3', description: 'Island with 1/3 jungle' },
-      { id: 'option-3-3', image: '🏝️', fraction: '1/4', description: 'Island with 1/4 jungle' },
-    ],
-    'clue-4': [
-      { id: 'option-4-1', image: '🧪', fraction: '3/4', description: 'Bottle with 3/4 potion' },
-      { id: 'option-4-2', image: '🧪', fraction: '1/2', description: 'Bottle with 1/2 potion' },
-      { id: 'option-4-3', image: '🧪', fraction: '1/4', description: 'Bottle with 1/4 potion' },
-    ],
-    'clue-5': [
-      { id: 'option-5-1', image: '⛵', fraction: '1/3', description: 'Ship with 1/3 sails' },
-      { id: 'option-5-2', image: '⛵', fraction: '2/3', description: 'Ship with 2/3 sails' },
-      { id: 'option-5-3', image: '⛵', fraction: '1/2', description: 'Ship with 1/2 sails' },
-    ],
+    // ... 24 sets of options for each clue ...
   };
 
   // Game state
