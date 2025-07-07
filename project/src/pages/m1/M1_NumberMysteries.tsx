@@ -270,7 +270,11 @@ const M1_NumberMysteries: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 flex flex-col items-center py-6">
       <div className="w-full max-w-4xl px-2 sm:px-6">
-        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} />
+        <ProgressBarSection 
+          sectionLabels={sectionLabels} 
+          currentSection={section} 
+          onSectionChange={(idx) => setSection(idx)}
+        />
         {/* Only show the quiz progress bar in the Warm-Up section */}
         {sectionLabels[section] === 'Warm-Up' && (
           <ProgressBarMain current={questionsCompleted} total={TOTAL_QUESTIONS} color="bg-indigo-500" label="questions complete" />
