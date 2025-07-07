@@ -54,6 +54,54 @@ const RocketBuilderChallenge: React.FC = () => {
       answer: 624,
       image: '🚀',
       unlocked: false
+    },
+    {
+      id: 'engines',
+      name: 'Rocket Engines',
+      riddle: "I'm a number with 5 hundreds, 0 tens, and 9 ones. What am I?",
+      answer: 509,
+      image: '🚀',
+      unlocked: false
+    },
+    {
+      id: 'fuel',
+      name: 'Rocket Fuel',
+      riddle: "I'm a number with 8 hundreds, 4 tens, and 0 ones. What am I?",
+      answer: 840,
+      image: '🚀',
+      unlocked: false
+    },
+    {
+      id: 'wings',
+      name: 'Rocket Wings',
+      riddle: "I'm a number with 7 hundreds, 0 tens, and 6 ones. What am I?",
+      answer: 706,
+      image: '🚀',
+      unlocked: false
+    },
+    {
+      id: 'antenna',
+      name: 'Rocket Antenna',
+      riddle: "I'm a number with 1 hundred, 5 tens, and 0 ones. What am I?",
+      answer: 150,
+      image: '🚀',
+      unlocked: false
+    },
+    {
+      id: 'windows',
+      name: 'Rocket Windows',
+      riddle: "I'm a number with 9 hundreds, 2 tens, and 3 ones. What am I?",
+      answer: 923,
+      image: '🚀',
+      unlocked: false
+    },
+    {
+      id: 'door',
+      name: 'Rocket Door',
+      riddle: "I'm a number with 3 hundreds, 0 tens, and 8 ones. What am I?",
+      answer: 308,
+      image: '🚀',
+      unlocked: false
     }
   ];
   

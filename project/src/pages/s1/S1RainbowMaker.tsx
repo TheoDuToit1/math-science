@@ -124,6 +124,119 @@ const warmupQuestions = [
   },
 ];
 
+const wrapupQuestions = [
+  {
+    question: 'What causes rainbows to form?',
+    options: [
+      { text: 'Lightning striking the ground', explanation: 'Lightning doesn\'t create rainbows.' },
+      { text: 'Sunlight passing through raindrops', explanation: 'Correct! Sunlight refracts and reflects through raindrops to create rainbows.' },
+      { text: 'Clouds mixing with blue sky', explanation: 'Cloud mixing doesn\'t create the light refraction needed for rainbows.' },
+      { text: 'Wind blowing through the trees', explanation: 'Wind doesn\'t create rainbows.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is the correct order of colors in a rainbow?',
+    options: [
+      { text: 'ROYGBIV (Red, Orange, Yellow, Green, Blue, Indigo, Violet)', explanation: 'Correct! The colors always appear in this order.' },
+      { text: 'VIBGYOR (Violet, Indigo, Blue, Green, Yellow, Orange, Red)', explanation: 'This is the reverse order. Rainbows always start with red on the outside.' },
+      { text: 'RYBGOV (Red, Yellow, Blue, Green, Orange, Violet)', explanation: 'This is not the correct order of rainbow colors.' },
+      { text: 'BYGOIR (Blue, Yellow, Green, Orange, Indigo, Red)', explanation: 'This is not the correct order of rainbow colors.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which scientist is famous for discovering how white light splits into colors?',
+    options: [
+      { text: 'Albert Einstein', explanation: 'Einstein is known for relativity, not light refraction.' },
+      { text: 'Galileo Galilei', explanation: 'Galileo is known for astronomy discoveries, not light refraction.' },
+      { text: 'Isaac Newton', explanation: 'Correct! Newton discovered that white light contains all colors of the rainbow.' },
+      { text: 'Marie Curie', explanation: 'Curie is known for her work on radioactivity, not light refraction.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What shape is a complete rainbow?',
+    options: [
+      { text: 'Half-circle', explanation: 'We often see half-circles, but complete rainbows are full circles.' },
+      { text: 'Full circle', explanation: 'Correct! A rainbow is actually a full circle, but we usually only see half from the ground.' },
+      { text: 'Straight line', explanation: 'Rainbows are curved, not straight.' },
+      { text: 'Square', explanation: 'Rainbows are never square-shaped.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What weather conditions are needed to see a rainbow?',
+    options: [
+      { text: 'Sunny and rainy at the same time', explanation: 'Correct! You need both sunlight and water droplets in the air.' },
+      { text: 'Completely cloudy and stormy', explanation: 'Without sunlight, rainbows cannot form.' },
+      { text: 'Hot and dry conditions', explanation: 'Without water droplets, rainbows cannot form.' },
+      { text: 'Snowy and cold', explanation: 'Snow doesn\'t refract light in the same way as raindrops.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Why can\'t you ever reach the end of a rainbow?',
+    options: [
+      { text: 'Rainbows move too quickly', explanation: 'Rainbows don\'t actually move on their own.' },
+      { text: 'Rainbows are optical illusions', explanation: 'Correct! Rainbows aren\'t physical objects but optical phenomena that move as you move.' },
+      { text: 'Rainbows are too far away', explanation: 'Distance isn\'t the issue - rainbows aren\'t physical objects.' },
+      { text: 'Rainbows disappear when you get close', explanation: 'While this seems true, it\'s because rainbows are optical illusions, not physical objects.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What happens when light passes through a prism?',
+    options: [
+      { text: 'It gets brighter', explanation: 'Light doesn\'t necessarily get brighter through a prism.' },
+      { text: 'It disappears', explanation: 'Light doesn\'t disappear when passing through a prism.' },
+      { text: 'It splits into different colors', explanation: 'Correct! The prism refracts light, splitting white light into its component colors.' },
+      { text: 'It turns completely blue', explanation: 'Light doesn\'t turn a single color when passing through a prism.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is the scientific term for the bending of light as it passes from one medium to another?',
+    options: [
+      { text: 'Reflection', explanation: 'Reflection is when light bounces off a surface.' },
+      { text: 'Refraction', explanation: 'Correct! Refraction is the bending of light as it passes from one medium to another.' },
+      { text: 'Absorption', explanation: 'Absorption is when light is taken in by a material.' },
+      { text: 'Dispersion', explanation: 'Dispersion is the separation of light into colors, which happens because of refraction.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'Where should the sun be positioned for you to see a rainbow?',
+    options: [
+      { text: 'Behind you', explanation: 'Correct! The sun needs to be behind you, with rain or water droplets in front of you.' },
+      { text: 'In front of you', explanation: 'If the sun is in front of you, the rainbow would form behind you where you can\'t see it.' },
+      { text: 'Directly overhead', explanation: 'With the sun directly overhead, rainbows are difficult to see.' },
+      { text: 'It doesn\'t matter', explanation: 'The position of the sun is crucial for seeing a rainbow.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What makes a double rainbow appear?',
+    options: [
+      { text: 'Two separate rain showers', explanation: 'Double rainbows don\'t require two separate rain showers.' },
+      { text: 'Extra bright sunlight', explanation: 'Brightness alone doesn\'t create double rainbows.' },
+      { text: 'Light reflecting twice inside raindrops', explanation: 'Correct! The second rainbow forms when light reflects twice inside raindrops.' },
+      { text: 'Two suns in the sky', explanation: 'There\'s only one sun in our sky.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+];
+
 // Videos for the introduction section
 const introVideos = [
   {
@@ -431,6 +544,8 @@ const S1RainbowMaker: React.FC = () => {
   const [showExplanation, setShowExplanation] = useState(false);
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
   const [activityTab, setActivityTab] = useState(0);
+  const [builderWrongIndex, setBuilderWrongIndex] = useState<number | null>(null);
+  const [builderWrongExplanation, setBuilderWrongExplanation] = useState<string | null>(null);
 
   const nextSection = () => {
     setSection((s) => Math.min(s + 1, sections.length - 1));
@@ -502,6 +617,15 @@ const S1RainbowMaker: React.FC = () => {
         })()
       : <div className="w-16 h-16 bg-gray-100 rounded mb-1" />
   }));
+  const builderItemExplanations: Record<string, string> = {
+    sun: 'The sun is needed first because it provides the light for a rainbow.',
+    water: 'Water comes after the sun because sunlight needs to pass through water droplets.',
+    cloud: 'Clouds can bring rain, but check if they are needed first in this puzzle.',
+    rain: 'Rain comes after clouds and sun, as it provides the droplets for the rainbow.',
+    prism: 'A prism splits sunlight, but only after the sun shines.',
+    refraction: 'Refraction happens after sunlight passes through water or a prism.',
+    rainbow: 'The rainbow appears last, after all the steps are complete!'
+  };
   const handleBuilderDrop = (event: DragEndEvent) => {
     const { active, over } = event;
     if (!active || !over) return;
@@ -510,12 +634,23 @@ const S1RainbowMaker: React.FC = () => {
     newPlaced = newPlaced.map(id => (id === active.id ? undefined : id));
     newPlaced[slotIdx] = active.id as string;
     setBuilderPlaced(newPlaced);
+    setBuilderWrongIndex(null);
+    setBuilderWrongExplanation(null);
     setTimeout(() => {
       if (
         newPlaced.length === currentBuilderPuzzle.correctOrder.length &&
         newPlaced.every((id, i) => id === currentBuilderPuzzle.correctOrder[i])
       ) {
         setShowBuilderSuccess(true);
+      } else if (newPlaced[slotIdx] !== currentBuilderPuzzle.correctOrder[slotIdx]) {
+        const dropped = newPlaced[slotIdx];
+        const shouldBe = currentBuilderPuzzle.correctOrder[slotIdx];
+        setBuilderWrongIndex(slotIdx);
+        setBuilderWrongExplanation(
+          `${builderItemExplanations[dropped] || 'That is not the correct step.'}\nYou dropped "${currentBuilderPuzzle.items.find(i => i.id === dropped)?.label || dropped}", but the correct step here is "${currentBuilderPuzzle.items.find(i => i.id === shouldBe)?.label || shouldBe}".`
+        );
+        playSoundEffect('fail');
+        setTimeout(() => setBuilderWrongIndex(null), 1200);
       }
     }, 200);
   };
@@ -605,38 +740,66 @@ const S1RainbowMaker: React.FC = () => {
     {
       label: 'Builder Puzzle',
       content: (
-            <SectionWrapper key="builder" label="Hands-On Puzzle" icon="🧩">
-              <div className="mb-8 flex flex-col items-center">
-                <div className="font-bold mb-2">{currentBuilderPuzzle.prompt}</div>
-                <DragDropZone
-                  draggableItems={builderDraggables}
-                  droppableZones={builderDroppables}
-                  onDrop={handleBuilderDrop}
-                  layout="horizontal"
-                />
+        <SectionWrapper key="builder" label="Hands-On Puzzle" icon="🧩">
+          <div className="mb-8 flex flex-col items-center">
+            <div className="font-bold mb-2">{currentBuilderPuzzle.prompt}</div>
+            <DragDropZone
+              draggableItems={builderDraggables}
+              droppableZones={builderDroppables.map((zone, idx) => ({
+                ...zone,
+                className: builderWrongIndex === idx ? 'ring-4 ring-red-400 bg-red-50 animate-shake' : zone.className
+              }))}
+              onDrop={handleBuilderDrop}
+              layout="horizontal"
+            />
+            {builderWrongExplanation && (
+              <div className="mt-4 text-red-600 font-semibold text-center animate-fade-in">
+                {builderWrongExplanation}
               </div>
-              {showBuilderSuccess && (
-                <div className="flex flex-col items-center mt-2">
-                  <motion.img
-                    src={currentBuilderPuzzle.successImage}
-                    alt="Rainbow celebration"
-                    className="w-96 rounded-xl shadow-lg border-4 border-yellow-200 cursor-zoom-in"
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
-                    onClick={() => setFullscreenImage(currentBuilderPuzzle.successImage)}
-                  />
-                  <motion.div
-                    initial={{ opacity: 0, x: -60 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                    className="text-5xl mt-[-2.5rem]"
-                  >
-                    ✨
-                  </motion.div>
-                </div>
-              )}
-            </SectionWrapper>
+            )}
+          </div>
+          {showBuilderSuccess && (
+            <div className="flex flex-col items-center mt-2">
+              <motion.img
+                src={currentBuilderPuzzle.successImage}
+                alt="Rainbow celebration"
+                className="w-96 rounded-xl shadow-lg border-4 border-yellow-200 cursor-zoom-in"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                onClick={() => setFullscreenImage(currentBuilderPuzzle.successImage)}
+              />
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-5xl mt-[-2.5rem]"
+              >
+                ✨
+              </motion.div>
+            </div>
+          )}
+          <style>{`
+            @keyframes shake {
+              0% { transform: translateX(0); }
+              20% { transform: translateX(-8px); }
+              40% { transform: translateX(8px); }
+              60% { transform: translateX(-8px); }
+              80% { transform: translateX(8px); }
+              100% { transform: translateX(0); }
+            }
+            .animate-shake {
+              animation: shake 0.4s;
+            }
+            @keyframes fade-in {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+            .animate-fade-in {
+              animation: fade-in 0.5s ease-in-out forwards;
+            }
+          `}</style>
+        </SectionWrapper>
       ),
     },
     {
@@ -790,6 +953,10 @@ const S1RainbowMaker: React.FC = () => {
           )}
           {section === 4 && (
             <SectionWrapper key="wrapup" label="Wrap-Up" icon="🎯">
+              <div className="mb-8">
+                <h2 className="text-xl font-bold text-center mb-6">Test Your Knowledge</h2>
+                <QuizQuestions questions={wrapupQuestions} />
+              </div>
               <WrapUp
                 title="Rainbow Science Expert"
                 summary="You've discovered how rainbows are formed!"

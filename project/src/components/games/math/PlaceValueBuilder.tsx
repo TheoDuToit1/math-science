@@ -33,6 +33,11 @@ const PlaceValueBuilder: React.FC = () => {
     { number: 170, hint: "1 hundred, 7 tens, 0 ones" },
     { number: 629, hint: "6 hundreds, 2 tens, 9 ones" },
     { number: 504, hint: "5 hundreds, 0 tens, 4 ones" },
+    { number: 723, hint: "7 hundreds, 2 tens, 3 ones" },
+    { number: 890, hint: "8 hundreds, 9 tens, 0 ones" },
+    { number: 407, hint: "4 hundreds, 0 tens, 7 ones" },
+    { number: 150, hint: "1 hundred, 5 tens, 0 ones" },
+    { number: 962, hint: "9 hundreds, 6 tens, 2 ones" },
   ];
 
   // Initialize with first level

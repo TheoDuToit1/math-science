@@ -129,8 +129,8 @@ const introVideos = [
 
 const mythVideos = [
   {
-    title: 'What Is Lightning? for Kids',
-    url: 'https://www.youtube.com/embed/1BvHet0AgSo',
+    title: 'How Does Lightning Strike? | Lightning Explained For Kids | KLT',
+    url: 'https://www.youtube.com/embed/2KoEwKYOr80',
     thumbnail: '/images/science/s3_lightning_power/lightning_kids_thumbnail.jpg',
   },
 ];

@@ -37,6 +37,36 @@ const ZeroPowerGame: React.FC = () => {
       number2: 150, 
       explanation: "150 has a zero in the ones place, making it 1 hundred, 5 tens, and 0 ones = 150. That's bigger than 105 (1 hundred, 0 tens, and 5 ones)."
     },
+    { 
+      number1: 60, 
+      number2: 600, 
+      explanation: "600 has two zeros, making it 6 hundreds, 0 tens, and 0 ones = 600. That's bigger than 60 (6 tens and 0 ones)."
+    },
+    { 
+      number1: 209, 
+      number2: 290, 
+      explanation: "290 has a zero in the ones place, making it 2 hundreds, 9 tens, and 0 ones = 290. That's bigger than 209 (2 hundreds, 0 tens, and 9 ones)."
+    },
+    { 
+      number1: 350, 
+      number2: 305, 
+      explanation: "350 has a zero in the ones place, making it 3 hundreds, 5 tens, and 0 ones = 350. That's bigger than 305 (3 hundreds, 0 tens, and 5 ones)."
+    },
+    { 
+      number1: 802, 
+      number2: 820, 
+      explanation: "820 has a zero in the ones place, making it 8 hundreds, 2 tens, and 0 ones = 820. That's bigger than 802 (8 hundreds, 0 tens, and 2 ones)."
+    },
+    { 
+      number1: 90, 
+      number2: 900, 
+      explanation: "900 has two zeros, making it 9 hundreds, 0 tens, and 0 ones = 900. That's bigger than 90 (9 tens and 0 ones)."
+    },
+    { 
+      number1: 640, 
+      number2: 604, 
+      explanation: "640 has a zero in the ones place, making it 6 hundreds, 4 tens, and 0 ones = 640. That's bigger than 604 (6 hundreds, 0 tens, and 4 ones)."
+    },
   ];
   
   const currentPair = comparisonPairs[currentPairIndex];
