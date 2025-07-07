@@ -740,45 +740,45 @@ const S1RainbowMaker: React.FC = () => {
     {
       label: 'Builder Puzzle',
       content: (
-        <SectionWrapper key="builder" label="Hands-On Puzzle" icon="🧩">
-          <div className="mb-8 flex flex-col items-center">
-            <div className="font-bold mb-2">{currentBuilderPuzzle.prompt}</div>
-            <DragDropZone
-              draggableItems={builderDraggables}
+            <SectionWrapper key="builder" label="Hands-On Puzzle" icon="🧩">
+              <div className="mb-8 flex flex-col items-center">
+                <div className="font-bold mb-2">{currentBuilderPuzzle.prompt}</div>
+                <DragDropZone
+                  draggableItems={builderDraggables}
               droppableZones={builderDroppables.map((zone, idx) => ({
                 ...zone,
                 className: builderWrongIndex === idx ? 'ring-4 ring-red-400 bg-red-50 animate-shake' : zone.className
               }))}
-              onDrop={handleBuilderDrop}
-              layout="horizontal"
-            />
+                  onDrop={handleBuilderDrop}
+                  layout="horizontal"
+                />
             {builderWrongExplanation && (
               <div className="mt-4 text-red-600 font-semibold text-center animate-fade-in">
                 {builderWrongExplanation}
               </div>
             )}
-          </div>
-          {showBuilderSuccess && (
-            <div className="flex flex-col items-center mt-2">
-              <motion.img
-                src={currentBuilderPuzzle.successImage}
-                alt="Rainbow celebration"
-                className="w-96 rounded-xl shadow-lg border-4 border-yellow-200 cursor-zoom-in"
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                onClick={() => setFullscreenImage(currentBuilderPuzzle.successImage)}
-              />
-              <motion.div
-                initial={{ opacity: 0, x: -60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-5xl mt-[-2.5rem]"
-              >
-                ✨
-              </motion.div>
-            </div>
-          )}
+              </div>
+              {showBuilderSuccess && (
+                <div className="flex flex-col items-center mt-2">
+                  <motion.img
+                    src={currentBuilderPuzzle.successImage}
+                    alt="Rainbow celebration"
+                    className="w-96 rounded-xl shadow-lg border-4 border-yellow-200 cursor-zoom-in"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                    onClick={() => setFullscreenImage(currentBuilderPuzzle.successImage)}
+                  />
+                  <motion.div
+                    initial={{ opacity: 0, x: -60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                    className="text-5xl mt-[-2.5rem]"
+                  >
+                    ✨
+                  </motion.div>
+                </div>
+              )}
           <style>{`
             @keyframes shake {
               0% { transform: translateX(0); }
@@ -799,7 +799,7 @@ const S1RainbowMaker: React.FC = () => {
               animation: fade-in 0.5s ease-in-out forwards;
             }
           `}</style>
-        </SectionWrapper>
+            </SectionWrapper>
       ),
     },
     {

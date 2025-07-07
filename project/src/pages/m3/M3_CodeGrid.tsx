@@ -16,80 +16,47 @@ import ProgressBarQuestions from '../../components/global/ProgressBarQuestions';
 // Quiz questions for the warm-up section
 const warmupQuestions = [
   {
-    question: 'What do we call a step-by-step instruction?',
+    question: 'What is an algorithm?',
     options: [
-      { text: 'Dance', explanation: 'A dance has steps, but it\'s not the term for step-by-step instructions in computing.' },
-      { text: 'Plan', explanation: 'A plan can include steps, but it\'s not the specific term used in computing.' },
-      { text: 'Algorithm', explanation: 'Correct! An algorithm is a step-by-step procedure for solving a problem or accomplishing a task.' },
-      { text: 'Magic', explanation: 'While coding might seem magical, it follows logical steps, not magic.' },
-    ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'Which way is LEFT?',
-    options: [
-      { text: '🡺', explanation: 'This arrow points right, not left.' },
-      { text: '🡸', explanation: 'Correct! This arrow points left.' },
-      { text: '🡹', explanation: 'This arrow points up, not left.' },
-      { text: '🡻', explanation: 'This arrow points down, not left.' },
+      { text: 'A type of robot', explanation: 'An algorithm is not a physical object like a robot.' },
+      { text: 'A step-by-step set of instructions', explanation: 'Correct! An algorithm is a step-by-step set of instructions to solve a problem.' },
+      { text: 'A computer game', explanation: 'While algorithms are used in games, they are not games themselves.' },
+      { text: 'A math equation', explanation: 'Algorithms can include math equations, but they are more than just equations.' },
     ],
     correct: 1,
     image: null,
   },
   {
-    question: 'What\'s the next pattern? 🔺🔺🔵🔺🔺🔵...',
+    question: 'Which of these is NOT a coding direction?',
     options: [
-      { text: '🔵', explanation: 'Correct! The pattern is two triangles followed by a circle, repeating.' },
-      { text: '🔺', explanation: 'If we follow the pattern of two triangles and one circle, the next shape would be a circle, not a triangle.' },
-      { text: '⚫', explanation: 'The pattern uses blue circles, not black circles.' },
-      { text: '❌', explanation: 'An X is not part of the established pattern.' },
+      { text: 'Forward', explanation: 'Forward is a common coding direction.' },
+      { text: 'Left', explanation: 'Left is a common coding direction.' },
+      { text: 'Right', explanation: 'Right is a common coding direction.' },
+      { text: 'Sideways', explanation: 'Correct! "Sideways" is not typically used as a coding direction. We use left or right instead.' },
+    ],
+    correct: 3,
+    image: null,
+  },
+  {
+    question: 'What is a grid?',
+    options: [
+      { text: 'A series of horizontal and vertical lines forming squares', explanation: 'Correct! A grid is made up of horizontal and vertical lines that form squares or cells.' },
+      { text: 'A type of computer', explanation: 'A grid is not a type of computer.' },
+      { text: 'A programming language', explanation: 'A grid is not a programming language.' },
+      { text: 'A robot', explanation: 'A grid is not a robot.' },
     ],
     correct: 0,
     image: null,
   },
   {
-    question: 'What happens if one step in a code is wrong?',
+    question: 'What does "loop" mean in coding?',
     options: [
-      { text: 'It still works', explanation: 'Code requires precise instructions. One wrong step can cause problems.' },
-      { text: 'Nothing changes', explanation: 'A wrong step in code will affect the outcome.' },
-      { text: 'It breaks', explanation: 'Correct! When code has an error, it often doesn\'t work as expected or breaks completely.' },
-      { text: 'It goes faster', explanation: 'Errors in code don\'t make it run faster; they cause problems.' },
+      { text: 'To make a mistake', explanation: 'Making mistakes in code is called a "bug," not a loop.' },
+      { text: 'To repeat steps', explanation: 'Correct! A loop repeats a set of instructions multiple times.' },
+      { text: 'To delete code', explanation: 'Deleting code is not referred to as a loop.' },
+      { text: 'To save a file', explanation: 'Saving a file is not related to loops in coding.' },
     ],
-    correct: 2,
-    image: null,
-  },
-  {
-    question: 'Which direction is this arrow 🡺 pointing?',
-    options: [
-      { text: 'Right', explanation: 'Correct! This arrow points to the right.' },
-      { text: 'Left', explanation: 'Left is the opposite direction.' },
-      { text: 'Up', explanation: 'Up is a different direction.' },
-      { text: 'Down', explanation: 'Down is a different direction.' },
-    ],
-    correct: 0,
-    image: null,
-  },
-  {
-    question: 'What is an algorithm?',
-    options: [
-      { text: 'A set of steps to solve a problem', explanation: 'Correct! An algorithm is a step-by-step solution.' },
-      { text: 'A random guess', explanation: 'Algorithms are not random.' },
-      { text: 'A magic trick', explanation: 'Algorithms are logical, not magic.' },
-      { text: 'A type of food', explanation: 'Algorithm is not a food.' },
-    ],
-    correct: 0,
-    image: null,
-  },
-  {
-    question: 'What comes after a left turn if you are facing north?',
-    options: [
-      { text: 'West', explanation: 'Correct! A left turn from north faces west.' },
-      { text: 'East', explanation: 'East is a right turn from north.' },
-      { text: 'South', explanation: 'South is a U-turn from north.' },
-      { text: 'North', explanation: 'You started facing north.' },
-    ],
-    correct: 0,
+    correct: 1,
     image: null,
   },
   {
@@ -125,6 +92,193 @@ const warmupQuestions = [
     correct: 0,
     image: null,
   },
+  {
+    question: 'What is a coordinate in a grid?',
+    options: [
+      { text: 'A type of robot', explanation: 'A coordinate is not a robot.' },
+      { text: 'A location defined by numbers', explanation: 'Correct! Coordinates use numbers to identify a specific location in a grid.' },
+      { text: 'A programming language', explanation: 'A coordinate is not a programming language.' },
+      { text: 'A computer game', explanation: 'A coordinate is not a game, though games may use coordinates.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What does "debug" mean?',
+    options: [
+      { text: 'To add more bugs', explanation: 'Debugging actually means removing bugs, not adding them.' },
+      { text: 'To find and fix mistakes in code', explanation: 'Correct! Debugging is the process of finding and fixing errors in code.' },
+      { text: 'To create a new program', explanation: 'Creating a new program is not debugging.' },
+      { text: 'To turn off a computer', explanation: 'Turning off a computer is not debugging.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is a sequence?',
+    options: [
+      { text: 'A type of computer', explanation: 'A sequence is not a type of computer.' },
+      { text: 'A random collection of items', explanation: 'A sequence is ordered, not random.' },
+      { text: 'An ordered list of items', explanation: 'Correct! A sequence is an ordered list of items or instructions.' },
+      { text: 'A programming language', explanation: 'A sequence is not a programming language.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'If a robot is facing north and turns right, which direction is it facing?',
+    options: [
+      { text: 'North', explanation: 'The robot would no longer be facing north after turning right.' },
+      { text: 'South', explanation: 'Turning right from north would not result in facing south.' },
+      { text: 'East', explanation: 'Correct! If facing north and turning right, the robot would now face east.' },
+      { text: 'West', explanation: 'Turning right from north would not result in facing west.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is a function in coding?',
+    options: [
+      { text: 'A type of loop', explanation: 'While functions can contain loops, they are not loops themselves.' },
+      { text: 'A reusable block of code', explanation: 'Correct! A function is a reusable block of code that performs a specific task.' },
+      { text: 'A type of bug', explanation: 'Functions are not bugs; they are useful code components.' },
+      { text: 'A grid coordinate', explanation: 'Functions are not related to grid coordinates.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is a conditional statement?',
+    options: [
+      { text: 'Code that always runs', explanation: 'Conditional statements only run when certain conditions are met.' },
+      { text: 'Code that never runs', explanation: 'Conditional statements do run when their conditions are met.' },
+      { text: 'Code that runs only if a condition is met', explanation: 'Correct! Conditional statements execute only when specific conditions are true.' },
+      { text: 'Code that causes bugs', explanation: 'Conditional statements are not inherently buggy.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is the purpose of comments in code?',
+    options: [
+      { text: 'To make the code run faster', explanation: 'Comments don\'t affect code execution speed.' },
+      { text: 'To create bugs', explanation: 'Comments don\'t create bugs; they\'re not executed.' },
+      { text: 'To explain how the code works', explanation: 'Correct! Comments help explain code to humans reading it.' },
+      { text: 'To give instructions to the computer', explanation: 'Comments are ignored by the computer; they\'re for humans.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is a variable in coding?',
+    options: [
+      { text: 'A fixed value that never changes', explanation: 'Variables can change; constants are fixed values.' },
+      { text: 'A storage container for data', explanation: 'Correct! Variables store data that can be used or changed in a program.' },
+      { text: 'A type of function', explanation: 'Variables are not functions; they store data.' },
+      { text: 'A coding error', explanation: 'Variables are not errors; they\'re essential parts of code.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What does "iterate" mean in coding?',
+    options: [
+      { text: 'To delete something', explanation: 'Iteration is not about deletion.' },
+      { text: 'To create something new', explanation: 'Iteration is not specifically about creation.' },
+      { text: 'To repeat a process', explanation: 'Correct! Iteration means to repeat a process, often using loops.' },
+      { text: 'To fix a bug', explanation: 'Fixing bugs is debugging, not iteration.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is an "if-else" statement?',
+    options: [
+      { text: 'A statement that always runs', explanation: 'If-else statements run conditionally.' },
+      { text: 'A statement that never runs', explanation: 'If-else statements do run based on conditions.' },
+      { text: 'A statement that does one thing if a condition is true and another if false', explanation: 'Correct! If-else statements execute different code based on whether a condition is true or false.' },
+      { text: 'A type of loop', explanation: 'If-else statements are conditional statements, not loops.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is the x-coordinate in a grid?',
+    options: [
+      { text: 'The horizontal position', explanation: 'Correct! The x-coordinate represents the horizontal position in a grid.' },
+      { text: 'The vertical position', explanation: 'The vertical position is the y-coordinate.' },
+      { text: 'The diagonal position', explanation: 'Coordinates don\'t directly represent diagonal positions.' },
+      { text: 'The center of the grid', explanation: 'The x-coordinate can be any horizontal position, not just the center.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'Which of these is NOT a common programming concept?',
+    options: [
+      { text: 'Loops', explanation: 'Loops are a common programming concept.' },
+      { text: 'Variables', explanation: 'Variables are a common programming concept.' },
+      { text: 'Telepathy', explanation: 'Correct! Telepathy is not a programming concept; it\'s a fictional ability to read minds.' },
+      { text: 'Functions', explanation: 'Functions are a common programming concept.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is pseudocode?',
+    options: [
+      { text: 'A programming language', explanation: 'Pseudocode is not a formal programming language.' },
+      { text: 'Fake code that doesn\'t work', explanation: 'While pseudocode doesn\'t run on computers, it\'s not "fake" - it\'s a planning tool.' },
+      { text: 'A simplified description of an algorithm', explanation: 'Correct! Pseudocode is a human-readable description of an algorithm\'s steps.' },
+      { text: 'A type of bug', explanation: 'Pseudocode is not a bug; it\'s a planning tool.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'If a robot moves forward 3 spaces, turns right, and moves forward 2 spaces, how far is it from its starting point?',
+    options: [
+      { text: '1 space', explanation: 'This is not the correct distance.' },
+      { text: '3 spaces', explanation: 'This is not the correct distance.' },
+      { text: '5 spaces', explanation: 'Adding the distances (3+2) doesn\'t give the correct answer for this movement pattern.' },
+      { text: '√13 spaces (approximately 3.6)', explanation: 'Correct! Using the Pythagorean theorem (3² + 2² = 13), the distance is √13.' },
+    ],
+    correct: 3,
+    image: null,
+  },
+  {
+    question: 'What is a "for loop" used for?',
+    options: [
+      { text: 'To repeat code a specific number of times', explanation: 'Correct! For loops repeat code a predetermined number of times.' },
+      { text: 'To make decisions', explanation: 'Decision-making is done with conditional statements, not for loops.' },
+      { text: 'To fix bugs', explanation: 'Loops don\'t fix bugs; they repeat code.' },
+      { text: 'To store data', explanation: 'Loops don\'t store data; variables do that.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is the output of this algorithm: Start with 5, add 3, multiply by 2?',
+    options: [
+      { text: '10', explanation: 'This would be (5 × 2) + 3, but the order is different.' },
+      { text: '13', explanation: 'This would be 5 + 3 + 5, which is not the algorithm.' },
+      { text: '16', explanation: 'Correct! 5 + 3 = 8, then 8 × 2 = 16.' },
+      { text: '11', explanation: 'This is not the correct result of the algorithm.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What is the purpose of indentation in code?',
+    options: [
+      { text: 'To make the code run faster', explanation: 'Indentation doesn\'t affect execution speed.' },
+      { text: 'To create more bugs', explanation: 'Proper indentation helps prevent bugs, not create them.' },
+      { text: 'To make the code look prettier', explanation: 'While indentation does improve appearance, that\'s not its main purpose.' },
+      { text: 'To show structure and organization', explanation: 'Correct! Indentation visually indicates code structure and helps show which code belongs to which blocks.' },
+    ],
+    correct: 3,
+    image: null,
+  },
 ];
 
 // Videos for the introduction section
@@ -148,6 +302,120 @@ const mythVideos = [
     url: 'https://www.youtube.com/embed/nwMeINjRl6Y',
     thumbnail: '/images/math/m3_code_grid/kids_coding_thumbnail.jpg',
   }
+];
+
+// Wrap-up quiz questions
+const wrapupQuestions = [
+  {
+    question: 'What is an algorithm?',
+    options: [
+      { text: 'A type of computer', explanation: 'An algorithm is not a type of computer.' },
+      { text: 'A step-by-step set of instructions to solve a problem', explanation: 'Correct! Algorithms are precise instructions that solve problems.' },
+      { text: 'A programming language', explanation: 'An algorithm can be written in any programming language, but it\'s not a language itself.' },
+      { text: 'A type of robot', explanation: 'Algorithms are instructions, not physical objects like robots.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'Why is pattern recognition important in coding?',
+    options: [
+      { text: 'It makes the code colorful', explanation: 'Pattern recognition isn\'t about visual appearance.' },
+      { text: 'It helps identify bugs', explanation: 'While this can be true, it\'s not the main benefit.' },
+      { text: 'It helps solve problems more efficiently', explanation: 'Correct! Recognizing patterns helps create efficient solutions and reusable code.' },
+      { text: 'It\'s not important', explanation: 'Pattern recognition is very important in coding.' },
+    ],
+    correct: 2,
+    image: null,
+  },
+  {
+    question: 'What happens when you run code with a bug?',
+    options: [
+      { text: 'The computer breaks', explanation: 'Bugs don\'t typically break computers physically.' },
+      { text: 'The code might not work as expected', explanation: 'Correct! Bugs cause code to behave incorrectly or fail.' },
+      { text: 'Nothing happens', explanation: 'Bugs do affect code execution.' },
+      { text: 'The code runs faster', explanation: 'Bugs don\'t make code run faster; they cause problems.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is a grid in coding?',
+    options: [
+      { text: 'A network of computers', explanation: 'In coding, a grid typically refers to a coordinate system, not a network.' },
+      { text: 'A coordinate system with rows and columns', explanation: 'Correct! A grid is a coordinate system that helps position elements.' },
+      { text: 'A type of programming language', explanation: 'A grid is not a programming language.' },
+      { text: 'A computer screen', explanation: 'While screens display grids, they aren\'t grids themselves.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is a loop used for?',
+    options: [
+      { text: 'To repeat code multiple times', explanation: 'Correct! Loops allow you to execute the same code multiple times.' },
+      { text: 'To make decisions', explanation: 'Decision-making is done with conditional statements, not loops.' },
+      { text: 'To store data', explanation: 'Data storage is done with variables, not loops.' },
+      { text: 'To connect to the internet', explanation: 'Loops don\'t connect to the internet.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'If a robot is at position (3,4) and moves 2 units right, where is it now?',
+    options: [
+      { text: '(5,4)', explanation: 'Correct! Moving right increases the x-coordinate by 2, from 3 to 5.' },
+      { text: '(3,6)', explanation: 'Moving right affects the x-coordinate, not the y-coordinate.' },
+      { text: '(1,4)', explanation: 'Moving right increases the x-coordinate, not decreases it.' },
+      { text: '(3,2)', explanation: 'Moving right affects the x-coordinate, not the y-coordinate.' },
+    ],
+    correct: 0,
+    image: null,
+  },
+  {
+    question: 'What is a function in coding?',
+    options: [
+      { text: 'A type of variable', explanation: 'Functions and variables are different concepts.' },
+      { text: 'A reusable block of code', explanation: 'Correct! Functions are reusable code blocks that perform specific tasks.' },
+      { text: 'A type of loop', explanation: 'Functions and loops are different concepts.' },
+      { text: 'A programming error', explanation: 'Functions are not errors; they\'re useful code components.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is debugging?',
+    options: [
+      { text: 'Writing new code', explanation: 'Debugging is fixing existing code, not writing new code.' },
+      { text: 'Finding and fixing errors in code', explanation: 'Correct! Debugging is the process of identifying and fixing bugs.' },
+      { text: 'Creating a grid', explanation: 'Debugging is not related to creating grids.' },
+      { text: 'Running code faster', explanation: 'Debugging doesn\'t necessarily make code run faster.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is a conditional statement?',
+    options: [
+      { text: 'Code that always runs', explanation: 'Conditional statements only run when specific conditions are met.' },
+      { text: 'Code that runs based on a condition', explanation: 'Correct! Conditional statements execute different code based on whether conditions are true or false.' },
+      { text: 'A type of loop', explanation: 'Conditional statements and loops are different concepts.' },
+      { text: 'A way to store data', explanation: 'Conditional statements don\'t store data; they control program flow.' },
+    ],
+    correct: 1,
+    image: null,
+  },
+  {
+    question: 'What is the most important skill for a coder to have?',
+    options: [
+      { text: 'Typing speed', explanation: 'While helpful, typing speed is not the most important skill.' },
+      { text: 'Problem-solving', explanation: 'Correct! Problem-solving is the core skill needed for coding.' },
+      { text: 'Memory', explanation: 'Good memory helps, but problem-solving is more important.' },
+      { text: 'Drawing ability', explanation: 'Drawing isn\'t typically necessary for coding.' },
+    ],
+    correct: 1,
+    image: null,
+  },
 ];
 
 // Section labels
@@ -345,6 +613,10 @@ const M3_CodeGrid: React.FC = () => {
           )}
           {section === 4 && (
             <SectionWrapper key="wrapup" label="Wrap-Up" icon="🎯">
+              <div className="mb-8">
+                <h2 className="text-xl font-bold text-center mb-6">Test Your Knowledge</h2>
+                <QuizQuestions questions={wrapupQuestions} />
+              </div>
               <WrapUp
                 title="Code Grid Master"
                 summary="You've learned how algorithms are step-by-step instructions that help us solve problems!"
