@@ -172,7 +172,7 @@ const S5_WaterCycleAdventure: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-green-100 flex flex-col items-center py-6">
       <div className="w-full max-w-4xl px-2 sm:px-6">
-        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} />
+        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} onSectionChange={setSection} />
         {/* Only show the quiz progress bar in the Warm-Up section */}
         {sectionLabels[section] === 'Warm-Up' && (
           <ProgressBarMain current={questionsCompleted} total={TOTAL_QUESTIONS} color="bg-blue-500" label="questions complete" />

@@ -256,7 +256,7 @@ const M5_MazeMaster: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 p-4 sm:p-6">
       <div className="max-w-4xl mx-auto">
-        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} />
+        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} onSectionChange={setSection} />
         {/* Only show the quiz progress bar in the Warm-Up section */}
         {sectionLabels[section] === 'Warm-Up' && (
           <ProgressBarMain current={questionsCompleted} total={TOTAL_QUESTIONS} color="bg-indigo-500" label="questions complete" />

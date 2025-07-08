@@ -273,7 +273,7 @@ const M1_NumberMysteries: React.FC = () => {
         <ProgressBarSection 
           sectionLabels={sectionLabels} 
           currentSection={section} 
-          onSectionChange={(idx) => setSection(idx)}
+          onSectionChange={setSection}
         />
         {/* Only show the quiz progress bar in the Warm-Up section */}
         {sectionLabels[section] === 'Warm-Up' && (

@@ -110,6 +110,157 @@ const warmupQuestions = [
     ],
     correct: 2,
   },
+  // 14 new questions for variety, patterns, logic, and moon/space facts:
+  {
+    question: 'Which phase comes next? 🌑 🌓 🌕 ...',
+    options: [
+      { text: '🌗', explanation: 'Correct! The sequence is new, first quarter, full, last quarter.' },
+      { text: '🌑', explanation: 'The sequence does not repeat new moon yet.' },
+      { text: '🌒', explanation: 'Waxing crescent comes before first quarter.' },
+      { text: '🌘', explanation: 'Waning crescent comes after last quarter.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'If you see a crescent moon, what shape is it?',
+    options: [
+      { text: 'A thin curve', explanation: 'Correct! A crescent moon looks like a thin curve or banana.' },
+      { text: 'A square', explanation: 'The moon never looks like a square.' },
+      { text: 'A triangle', explanation: 'The moon never looks like a triangle.' },
+      { text: 'A star', explanation: 'Stars and moons are different shapes.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What causes a lunar eclipse?',
+    options: [
+      { text: 'Earth blocks sunlight from reaching the moon', explanation: 'Correct! A lunar eclipse happens when Earth is between the sun and the moon.' },
+      { text: 'The moon moves in front of the sun', explanation: 'That is a solar eclipse.' },
+      { text: 'Clouds cover the moon', explanation: 'Clouds do not cause eclipses.' },
+      { text: 'The moon spins faster', explanation: 'The moon\'s speed does not cause eclipses.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'Which direction does the moon orbit Earth?',
+    options: [
+      { text: 'West to east', explanation: 'Correct! The moon orbits Earth from west to east.' },
+      { text: 'East to west', explanation: 'The moon appears to move east to west in the sky, but orbits west to east.' },
+      { text: 'North to south', explanation: 'The moon does not orbit north to south.' },
+      { text: 'South to north', explanation: 'The moon does not orbit south to north.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is the next number in this pattern: 1, 2, 4, 8, ...?',
+    options: [
+      { text: '10', explanation: 'The pattern is doubling: 1, 2, 4, 8, 16.' },
+      { text: '12', explanation: 'The pattern is doubling: 1, 2, 4, 8, 16.' },
+      { text: '16', explanation: 'Correct! The pattern is doubling: 1, 2, 4, 8, 16.' },
+      { text: '20', explanation: 'The pattern is doubling: 1, 2, 4, 8, 16.' },
+    ],
+    correct: 2,
+  },
+  {
+    question: 'Which of these is a pattern you might see in the sky?',
+    options: [
+      { text: 'Full moon every month', explanation: 'Correct! The full moon appears about once a month.' },
+      { text: 'Stars forming a square', explanation: 'Stars form many shapes, but not a perfect square.' },
+      { text: 'Clouds always in a line', explanation: 'Clouds move randomly, not always in a line.' },
+      { text: 'The sun rising in the west', explanation: 'The sun rises in the east.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is a tide?',
+    options: [
+      { text: 'The rise and fall of ocean water', explanation: 'Correct! Tides are caused by the moon\'s gravity.' },
+      { text: 'A type of moon phase', explanation: 'Tides are not moon phases.' },
+      { text: 'A kind of eclipse', explanation: 'Tides are not eclipses.' },
+      { text: 'A star pattern', explanation: 'Tides are not related to star patterns.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'Which symbol means "full moon"?',
+    options: [
+      { text: '🌕', explanation: 'Correct! This is the full moon symbol.' },
+      { text: '🌑', explanation: 'This is the new moon symbol.' },
+      { text: '🌓', explanation: 'This is the first quarter moon.' },
+      { text: '🌗', explanation: 'This is the last quarter moon.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'If you see the moon during the day, is that normal?',
+    options: [
+      { text: 'Yes, sometimes the moon is visible in daylight', explanation: 'Correct! The moon can be seen during the day.' },
+      { text: 'No, the moon only comes out at night', explanation: 'The moon can be visible during the day.' },
+      { text: 'Only during an eclipse', explanation: 'The moon can be seen in the day even when there is no eclipse.' },
+      { text: 'Only in winter', explanation: 'The moon can be seen in the day in any season.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is the next phase after Waxing Crescent?',
+    options: [
+      { text: 'First Quarter', explanation: 'Correct! Waxing Crescent is followed by First Quarter.' },
+      { text: 'Full Moon', explanation: 'Full Moon comes later.' },
+      { text: 'New Moon', explanation: 'New Moon comes before Waxing Crescent.' },
+      { text: 'Waning Crescent', explanation: 'Waning Crescent comes after Last Quarter.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'If you face the moon and turn left, what direction are you facing?',
+    options: [
+      { text: 'East', explanation: 'If the moon is in the south, turning left faces east.' },
+      { text: 'West', explanation: 'If the moon is in the south, turning right faces west.' },
+      { text: 'North', explanation: 'If the moon is in the south, turning around faces north.' },
+      { text: 'South', explanation: 'You started facing south.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is a "blue moon"?',
+    options: [
+      { text: 'A second full moon in one month', explanation: 'Correct! A blue moon is the second full moon in a calendar month.' },
+      { text: 'A moon that looks blue', explanation: 'The moon rarely looks blue.' },
+      { text: 'A new moon', explanation: 'A blue moon is not a new moon.' },
+      { text: 'A moon during an eclipse', explanation: 'A blue moon is not related to eclipses.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is the next letter in this pattern: M, O, O, N, ...?',
+    options: [
+      { text: 'M', explanation: 'Correct! The pattern spells MOON repeatedly.' },
+      { text: 'O', explanation: 'The next letter is M to start the word again.' },
+      { text: 'N', explanation: 'The last letter was N.' },
+      { text: 'P', explanation: 'The pattern is MOON, not MOONP.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is the next phase? 🌑 🌒 🌓 ...',
+    options: [
+      { text: '🌔', explanation: 'Correct! The sequence is new, waxing crescent, first quarter, waxing gibbous.' },
+      { text: '🌕', explanation: 'Full moon comes after waxing gibbous.' },
+      { text: '🌗', explanation: 'Last quarter comes later.' },
+      { text: '🌘', explanation: 'Waning crescent comes much later.' },
+    ],
+    correct: 0,
+  },
+  {
+    question: 'What is the main cause of moon phases?',
+    options: [
+      { text: 'The moon orbits Earth', explanation: 'Correct! The changing angles of sunlight as the moon orbits Earth cause the phases.' },
+      { text: 'Clouds cover the moon', explanation: 'Clouds do not cause phases.' },
+      { text: 'The moon changes shape', explanation: 'The moon never changes shape.' },
+      { text: 'The sun moves around Earth', explanation: 'The sun does not orbit Earth.' },
+    ],
+    correct: 0,
+  },
 ];
 
 // Videos for the introduction section
@@ -148,7 +299,7 @@ const sections = [
   'Wrap-Up',
 ];
 const TOTAL_ACTIVITIES = activitySections.length;
-const TOTAL_QUESTIONS = 10; // Updated from 4 to 10 warm-up questions
+const TOTAL_QUESTIONS = 24;
 
 // Moon phase images for sequence (no flipping needed)
 const moonPhases = [
@@ -1220,7 +1371,7 @@ const S2_MoonMagicExplorer: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 flex flex-col items-center py-6">
       <div className="w-full max-w-4xl px-2 sm:px-6">
         {/* Section Bar (now global) */}
-        <ProgressBarSection sectionLabels={sectionLabels} currentSection={section} />
+        <ProgressBarSection sectionLabels={sections} currentSection={section} onSectionChange={setSection} />
         {/* Only show the quiz progress bar in the Warm-Up section */}
         {sectionLabels[section] === 'Warm-Up' && (
           <ProgressBarMain current={questionsCompleted} total={TOTAL_QUESTIONS} color="bg-indigo-500" label="questions complete" />
